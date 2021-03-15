@@ -30,7 +30,7 @@ class login extends CI_Controller
         $username = $this->input->post('username'); //getting username from login form
         $password = $this->input->post('password'); //getting password from login form
         if ($username == "infs" && $password == "3202") {
-            $this->load->view('welcome_message');
+            $this->load->view('index');
         } else {
             $this->load->view('login', $data);
         }
