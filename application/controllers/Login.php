@@ -19,6 +19,8 @@ class login extends CI_Controller
         $this->load->view('login', $data);
         $this->load->view('template/footer');
     }
+
+
     public function check_login()
     {
         $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
