@@ -25,7 +25,7 @@ class Profile extends CI_Controller
         $this->load->library('session'); //enable session
     }
 
-    public function mainPage()
+    public function Profile()
     {
         $this->load->database();
         $data['error'] = "";

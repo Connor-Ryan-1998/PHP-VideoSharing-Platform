@@ -36,9 +36,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>login"> Home </a>
+                    <a href="<?php echo base_url(); ?>MainPage"> Home </a>
                 </li>
             </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
             <ul class="navbar-nav my-lg-0">
                 <?php if (!$this->session->userdata('logged_in')) : ?>
                     <li class="nav-item">
@@ -51,11 +57,12 @@
                     </li>
                 <?php endif; ?>
             </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="<?php echo base_url(); ?>Profile"> Profile </a>
+                </li>
+            </ul>
 
         </div>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </nav>
     <div class="container">
