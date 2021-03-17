@@ -41,23 +41,22 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-        <ul class="navbar-nav my-lg-0">
-            <?php if (!$this->session->userdata('logged_in')) : ?>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <?php if (!$this->session->userdata('logged_in')) : ?>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>login"> Login </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($this->session->userdata('logged_in')) : ?>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>login"> Login </a>
+                    <a href="<?php echo base_url(); ?>Profile"> Profile </a>
                 </li>
-            <?php endif; ?>
-            <?php if ($this->session->userdata('logged_in')) : ?>
-                <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
-                </li>
-            <?php endif; ?>
-        </ul>
-        <ul class="navbar-nav my-lg-0">
-            <li class="nav-item">
-                <a href="<?php echo base_url(); ?>Profile"> Profile </a>
-            </li>
-        </ul>
-
+            </ul>
+        </div>
     </nav>
     <div class="container">
