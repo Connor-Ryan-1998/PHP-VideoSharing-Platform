@@ -28,18 +28,23 @@
         }
     </script>
     <nav class="navbar avbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">INFS3202 Video Sharing Platform</a>
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <a class="navbar-brand" href="#">INFS3202 Video Sharing Platform</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>MainPage"> Home </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
 
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a href="<?php echo base_url(); ?>MainPage"> Home </a>
-            </li>
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0 justify-content-center w-100">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <div class="mx-auto order-0">
+            <form class="form-inline my-2 my-lg-0 justify-content-center w-100">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
 
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
