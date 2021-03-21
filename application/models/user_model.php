@@ -1,21 +1,18 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ //put your code here
+ class User_model extends CI_Model{
 
-class User_model extends CI_Model
-{
-    public function login($username, $password)
-    {
-        // construct sql query
+    // Log in
+    public function login($username, $password){
+        // Validate
         $this->db->where('username', $username);
         $this->db->where('password', $password);
-        // making query
-        $query = $this->db->get('users');
+        $result = $this->db->get('users');
 
-        if ($query->num_rows() == 1) {
+        if($result->num_rows() == 1){
             return true;
         } else {
             return false;
         }
     }
 }
-
-?>"
