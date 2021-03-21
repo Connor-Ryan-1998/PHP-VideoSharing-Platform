@@ -28,16 +28,14 @@
         }
     </script>
     <nav class="navbar avbar-expand-lg navbar-dark bg-dark">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="#">INFS3202 Video Sharing Platform</a>
             <ul class="navbar-nav mr-auto">
-                <a class="navbar-brand" href="#">INFS3202 Video Sharing Platform</a>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="<?php echo base_url(); ?>MainPage"> Home </a>
-                    </li>
-                </ul>
+                <li class="nav-item">
+                    <a href="<?php echo base_url(); ?>MainPage"> Home </a>
+                </li>
             </ul>
-        </div>
+        </ul>
 
         <div class="mx-auto order-0">
             <form class="form-inline my-2 my-lg-0 justify-content-center w-100">
@@ -46,22 +44,20 @@
             </form>
         </div>
 
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <?php if (!$this->session->userdata('logged_in')) : ?>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url(); ?>login"> Login </a>
-                    </li>
-                <?php endif; ?>
-                <?php if ($this->session->userdata('logged_in')) : ?>
-                    <li class="nav-item">
-                        <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
-                    </li>
-                <?php endif; ?>
+        <ul class="navbar-nav ml-auto">
+            <?php if (!$this->session->userdata('logged_in')) : ?>
                 <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>Profile"> Profile </a>
+                    <a href="<?php echo base_url(); ?>login"> Login </a>
                 </li>
-            </ul>
-        </div>
+            <?php endif; ?>
+            <?php if ($this->session->userdata('logged_in')) : ?>
+                <li class="nav-item">
+                    <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
+                </li>
+            <?php endif; ?>
+            <li class="nav-item">
+                <a href="<?php echo base_url(); ?>Profile"> Profile </a>
+            </li>
+        </ul>
     </nav>
     <div class="container">
