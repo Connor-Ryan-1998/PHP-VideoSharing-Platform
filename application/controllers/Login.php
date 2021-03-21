@@ -30,7 +30,7 @@ class login extends CI_Controller
         $this->load->view('template/header');
         $username = $this->input->post('username'); //getting username from login form
         $password = $this->input->post('password'); //getting password from login form
-        if ($this->User_model->login($username, $password)) {
+        if ($this->user_model->login($username, $password)) {
             $this->load->view('index');
         } else {
             $this->load->view('login', $data);
