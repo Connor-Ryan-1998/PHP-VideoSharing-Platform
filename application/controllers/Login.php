@@ -19,7 +19,7 @@ class login extends CI_Controller
 	}
 	public function check_login()
 	{
-		$this->load->model('User_model');		//load user model
+		$this->load->model('user_model');		//load user model
 		$data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
 		$this->load->helper('form');
 		$this->load->helper('url');
@@ -27,7 +27,7 @@ class login extends CI_Controller
 		$username = $this->input->post('username'); //getting username from login form
 		$password = $this->input->post('password'); //getting password from login form
 		if (!$this->session->userdata('logged_in')) {	//Check if user already login
-			if ($this->User_model->login($username, $password)) //check username and password
+			if ($this->user_model->login($username, $password)) //check username and password
 			{
 				$user_data = array(
 					'username' => $username,
