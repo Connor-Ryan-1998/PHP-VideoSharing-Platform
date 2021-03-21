@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 //put your code here
-class user_model extends CI_Model
+class User_model extends CI_Model
 {
 
     // Log in
