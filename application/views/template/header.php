@@ -53,7 +53,7 @@
 
                 function load_data(query) {
                     $.ajax({
-                        url: "<?php echo base_url(); ?>ajax/fatch",
+                        url: "<?php echo base_url(); ?>ajax/fetch",
                         method: "GET",
                         data: {
                             query: query
