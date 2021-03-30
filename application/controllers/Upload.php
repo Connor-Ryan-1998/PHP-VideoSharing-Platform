@@ -33,7 +33,7 @@ class Upload extends CI_Controller
         $config['max_width'] = 1024;
         $config['max_height'] = 768;
         $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('userfile')) {
+        if (!$this->upload->do_upload('userFiles')) {
             $this->load->view('template/header');
             $data = array('error' => $this->upload->display_errors());
             $this->load->view('file', $data);
