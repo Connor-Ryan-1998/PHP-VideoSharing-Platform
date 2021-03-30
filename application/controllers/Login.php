@@ -11,7 +11,21 @@ class login extends CI_Controller
 		$this->load->view('template/header');
 		if (!$this->session->userdata('logged_in')) //check if user already login
 		{
-			$this->load->view('login', $data); //if user has not login ask user to login
+			if (get_cookie('remember')) { // check if user activate the "remember me" feature  
+				$username = get_cookie('username'); //get the username from cookie
+				$password = get_cookie('password'); //get the username from cookie
+				if ($this->user_model->login($username, $password)) //check username and password correct
+				{
+					$user_data = array(
+						'username' => $username,
+						'logged_in' => true 	//create session variable
+					);
+					$this->session->set_userdata($user_data); //set user status to login in session
+					$this->load->view('welcome_message'); //if user already logined show main page
+				}
+			} else {
+				$this->load->view('login', $data);	//if username password incorrect, show error msg and ask user to login
+			}
 		} else {
 			$this->load->view('welcome_message'); //if user already logined show main page
 		}

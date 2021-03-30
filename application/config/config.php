@@ -23,8 +23,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://infs3202-cb965ec3.uqcloud.net/PHP-VideoSharing-Platform';
 
+$config['base_url'] = 'https://infs3202-cb965ec3.uqcloud.net/PHP-VideoSharing-Platform';
+// $config['base_url'] = 'localhost';
 /*
 |--------------------------------------------------------------------------
 | Index File
