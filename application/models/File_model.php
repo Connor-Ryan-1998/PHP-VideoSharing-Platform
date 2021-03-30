@@ -20,7 +20,7 @@ class File_model extends CI_Model
             return null;
         } else {
             $this->db->select("*");
-            $this->db->from("userFiles");
+            $this->db->from("files");
             $this->db->like('filename', $query);
             $this->db->or_like('username', $query);
             $this->db->order_by('filename', 'DESC');
