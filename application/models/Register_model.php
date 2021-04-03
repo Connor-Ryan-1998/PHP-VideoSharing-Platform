@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Register_model extends CI_Model
 {
-    public function register_user($username, $emailAddress, $password,)
+    public function register_user($username, $emailAddress, $password)
     {
         $data = array(
             'username' => $username,
