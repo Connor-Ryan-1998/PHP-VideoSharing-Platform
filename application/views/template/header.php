@@ -38,7 +38,7 @@
         <form class="form-inline my-2 my-lg-0">
             <?php echo form_open('ajax'); ?>
             <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search" name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> </button>
+            <button id="resultButton" class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> </button>
             <?php echo form_close(); ?>
     </nav>
     <div class="container">
@@ -96,4 +96,12 @@
             button.btn.collapsed:before {
                 content: 'Show Result';
             }
+
+            #resultButton.btn::before {
+                content: 'Hide Result';
+            }
+
+            /* button.btn:before {
+                content: 'Hide Result';
+            } */
         </style>
