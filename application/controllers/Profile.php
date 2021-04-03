@@ -13,9 +13,4 @@ class Profile extends CI_Controller
         $this->load->view('profile');
         $this->load->view('template/footer');
     }
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->library('session'); //enable session
-    }
 }
