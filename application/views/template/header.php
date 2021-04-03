@@ -93,11 +93,15 @@
             });
         </script>
         <style>
-            button.btn.collapsed:before {
+            /* button.btn.collapsed:before {
+                content: 'Show Result';
+            } */
+
+            #resultButton.btn.collapsed:before {
                 content: 'Show Result';
             }
 
-            #resultButton.btn::before {
+            #resultButton.btn:before {
                 content: 'Hide Result';
             }
 
