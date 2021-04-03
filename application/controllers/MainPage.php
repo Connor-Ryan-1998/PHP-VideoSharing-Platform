@@ -32,7 +32,7 @@ class MainPage extends CI_Controller
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->view('template/header');
-        $this->load->view('MainPage', $data);
+        $this->load->view('mainpage', $data);
         $this->load->view('template/footer');
     }
 }

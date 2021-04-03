@@ -4,5 +4,23 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "files.exclude": {
+      "**/.gitignore": true,
+      "**/cache": true,
+      "**/composer.json": true,
+      "**/contributing.md": true,
+      "**/core": true,
+      "**/helpers": true,
+      "**/hooks": true,
+      "**/language": true,
+      "**/libraries": true,
+      "**/license.txt": true,
+      "**/logs": true,
+      "**/readme.rst": true,
+      "**/system": true,
+      "**/third_party": true,
+      "**/uploads": true
+    }
+  }
 }
