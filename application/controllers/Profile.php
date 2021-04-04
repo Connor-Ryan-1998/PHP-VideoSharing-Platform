@@ -11,12 +11,11 @@ class Profile extends CI_Controller
         $this->load->view('template/header');
         if ($this->session->userdata('logged_in')) {
             $username = get_cookie('username');
-            $data = $this->file_model->userData($username);
+            $data = $this->user_model->userData($username);
             $this->load->view('profile', $data);
         } else {
             $this->load->view('login');
         }
-        $this->load->view('profile');
         $this->load->view('template/footer');
     }
 }

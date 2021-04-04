@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Register_model extends CI_Model
+class File_model extends CI_Model
 {
 
     // upload file
