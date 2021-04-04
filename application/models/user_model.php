@@ -17,4 +17,12 @@ class User_model extends CI_Model
             return false;
         }
     }
+    public function userData($username)
+    {
+        $this->db->select("*");
+        $this->db->from("users");
+        $this->db->or_like('username', $username);
+        $query =  $this->db->get();
+        return $query->result_array();
+    }
 }

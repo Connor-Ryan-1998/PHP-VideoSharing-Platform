@@ -27,4 +27,12 @@ class Register_model extends CI_Model
             return $this->db->get();
         }
     }
+    public function userFiles($username)
+    {
+        $this->db->select("*");
+        $this->db->from("userFiles");
+        $this->db->equals('username', $username);
+        $this->db->order_by('filename', 'DESC');
+        return $this->db->get();
+    }
 }
