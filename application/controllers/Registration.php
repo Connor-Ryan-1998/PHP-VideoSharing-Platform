@@ -26,11 +26,12 @@ class Registration extends CI_Controller
 		$password = $this->input->post('password');
 		if (strlen($password) < 5 or !(1 === preg_match('~[0-9]~', $password))) {
 			$this->load->view('registration', $data);
+		} else if (!(filter_var($emailAddress, FILTER_VALIDATE_EMAIL))) {
+			$data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Not a valid email address</div>";
+			$this->load->view('registration', $data);
 		} else {
 			if ($this->register_model->register_user($username, $emailAddress, $password)) {
 				$data['error'] = "<div class=\"alert\" role=\"alert\"> Account has been registered, please wait while we direct you to the login page</div>";
-				$this->load->view('registration', $data);
-				sleep(3);
 				$this->load->view('login', $data);
 			}
 		}
