@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>login"> Home </a>
+                    <a href="<?php echo base_url(); ?>profile"> Profile </a>
                     <a href="<?php echo base_url(); ?>upload"> Upload </a>
                 </li>
             </ul>
@@ -25,6 +25,7 @@
                 <?php if (!$this->session->userdata('logged_in')) : ?>
                     <li class="nav-item">
                         <a href="<?php echo base_url(); ?>login"> Login </a>
+                        <a href="<?php echo base_url(); ?>registration"> Register </a>
                     </li>
                 <?php endif; ?>
                 <?php if ($this->session->userdata('logged_in')) : ?>
