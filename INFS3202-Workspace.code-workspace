@@ -10,12 +10,9 @@
       "**/cache": true,
       "**/composer.json": true,
       "**/contributing.md": true,
-      "**/helpers": true,
-      "**/hooks": true,
       "**/license.txt": true,
       "**/logs": true,
       "**/readme.rst": true,
-      "**/third_party": true,
       "**/uploads": true
     }
   }
