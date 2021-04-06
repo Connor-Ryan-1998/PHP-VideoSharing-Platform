@@ -19,8 +19,6 @@ class User_model extends CI_Model
     }
     public function userData($username)
     {
-        $this->db->select('*');
-        echo "<script>console.log('" . json_encode($username) . "');</script>";
         // $this->db->where('username', $username);
         return $this->db->get('users');
     }
