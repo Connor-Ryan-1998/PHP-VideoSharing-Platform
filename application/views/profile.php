@@ -13,7 +13,7 @@
             </div>
             <div class="col-sm">
                 Personnel Data
-                <?php echo $data['username']; ?>
+                <?php echo $username; ?>
             </div>
         </div>
     </div>
