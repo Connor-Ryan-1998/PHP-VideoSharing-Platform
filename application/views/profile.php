@@ -12,9 +12,23 @@
                     <?php echo form_close(); ?>
             </div>
             <div class="col-sm">
-                Personnel Data
-                <?php echo $username; ?>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=<?php echo $emailAddress; ?>>
+                <?php echo form_open(base_url() . 'profile/updatePersonnelData'); ?>
+                <h2 class="text-center">Personnel Data</h2>
+                <div class="form-group">
+                    <input type="text" readonly class="form-control" placeholder="Username" value=<?php echo $username; ?> name="username">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="EmailAddress" value=<?php echo $emailAddress; ?> name="emailAddress">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" value=<?php echo $password; ?> required="required" name="password">
+                </div>
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Update Data</button>
+                </div>
+                <?php echo form_close(); ?>
             </div>
         </div>
     </div>
