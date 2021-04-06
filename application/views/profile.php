@@ -14,6 +14,7 @@
             <div class="col-sm">
                 Personnel Data
                 <?php echo $username; ?>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=<?php echo $emailAddress; ?>>
             </div>
         </div>
     </div>
