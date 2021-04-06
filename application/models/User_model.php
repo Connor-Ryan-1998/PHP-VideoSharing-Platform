@@ -22,9 +22,8 @@ class User_model extends CI_Model
         // $this->db->where('username', $username);
         $query = $this->db->query("SELECT * FROM users;");
         foreach ($query->result() as $row) {
-            echo $row->title;
-            echo $row->name;
-            echo $row->body;
+            echo $row->emailAddress;
+            echo $row->username;
         }
         return $this->db->get('users');
     }
