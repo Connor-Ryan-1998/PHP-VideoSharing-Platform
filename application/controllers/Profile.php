@@ -12,7 +12,7 @@ class Profile extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $this->load->model('user_model');
             $username = $_SESSION['username'];
-            $data = $this->user_model->userData($username);
+            array($data) = $this->user_model->userData($username);
             echo "<script>console.log('" . json_encode($data) . "');</script>";
             $this->load->view('profile', $data);
         } else {
