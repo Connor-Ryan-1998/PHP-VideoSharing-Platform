@@ -13,7 +13,7 @@ class Profile extends CI_Controller
             $this->load->model('user_model');
             $username = $_SESSION['username'];
             $data = $this->user_model->userData($username);
-            echo "<script>console.log('" . json_encode(array_keys($data)) . "');</script>";
+            echo "<script>console.log('" . json_encode(array_keys($data[0])) . "');</script>";
             $this->load->view('profile', $data);
         } else {
             $this->load->view('login');
