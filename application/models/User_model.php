@@ -20,6 +20,12 @@ class User_model extends CI_Model
     public function userData($username)
     {
         // $this->db->where('username', $username);
+        $query = $this->db->query("SELECT * FROM users;");
+        foreach ($query->result() as $row) {
+            echo $row->title;
+            echo $row->name;
+            echo $row->body;
+        }
         return $this->db->get('users');
     }
 }
