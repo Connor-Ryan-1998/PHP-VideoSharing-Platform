@@ -19,7 +19,8 @@ class User_model extends CI_Model
     }
     public function userData($username)
     {
-        $query = $this->db->query('users');
+        $this->db->get('users');
+        $query = $this->db->where('username', $username);
         foreach ($query->result() as $row) {
             echo "<script>console.log('" . json_encode($row->emailAddress) . "');</script>";
             echo $row->username;
