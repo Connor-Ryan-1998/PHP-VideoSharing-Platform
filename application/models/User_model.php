@@ -19,12 +19,12 @@ class User_model extends CI_Model
     }
     public function userData($username)
     {
-        // $this->db->where('username', $username);
         $query = $this->db->query("SELECT * FROM users;");
         foreach ($query->result() as $row) {
-            echo $row->emailAddress;
+            echo "<script>console.log('" . json_encode($row->emailAddress) . "');</script>";
             echo $row->username;
         }
+        // $this->db->where('username', $username);
         return $this->db->get('users');
     }
 }
