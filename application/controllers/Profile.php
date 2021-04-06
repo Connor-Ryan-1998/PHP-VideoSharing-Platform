@@ -12,8 +12,8 @@ class Profile extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $this->load->model('user_model');
             $username = $_SESSION['username'];
-            array($data) = $this->user_model->userData($username);
-            echo "<script>console.log('" . json_encode($data) . "');</script>";
+            $data = $this->user_model->userData($username);
+            echo "<script>console.log('" . json_encode(array_keys($data)) . "');</script>";
             $this->load->view('profile', $data);
         } else {
             $this->load->view('login');
