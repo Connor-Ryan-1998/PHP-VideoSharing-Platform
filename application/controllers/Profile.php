@@ -25,9 +25,8 @@ class Profile extends CI_Controller
         $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
         $this->load->helper('form');
         $this->load->helper('url');
-        $this->load->view('template/header');
-        $username = $this->input->post('username'); //getting username from login form
-        $password = $this->input->post('password'); //getting password from login form
+        $username = $this->input->post('emailAddress');
+        $password = $this->input->post('password');
         if (!$this->session->userdata('logged_in')) {    //Check if user already login
             if ($this->user_model->login($username, $password)) //check username and password
             {

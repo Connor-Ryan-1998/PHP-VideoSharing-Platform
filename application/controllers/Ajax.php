@@ -18,4 +18,14 @@ class ajax extends CI_Controller
             echo "";
         }
     }
+    public function fileList()
+    {
+        // POST data
+        $postData = $this->input->post();
+
+        // Get data
+        $data = $this->file_model->getfileNames($postData);
+
+        echo json_encode($data);
+    }
 }

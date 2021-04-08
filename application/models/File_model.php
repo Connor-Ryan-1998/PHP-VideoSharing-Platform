@@ -35,4 +35,23 @@ class File_model extends CI_Model
         $this->db->order_by('filename', 'DESC');
         return $this->db->get();
     }
+
+    public function getfileNames($postData)
+    {
+        $response = array();
+
+        if (isset($postData['search'])) {
+            // Select record
+            $this->db->select('*');
+            $this->db->where("filename like '%" . $postData['search'] . "%' ");
+
+            $records = $this->db->get('userFiles')->result();
+
+            foreach ($records as $row) {
+                $response[] = array("value" => $row->id, "label" => $row->filename);
+            }
+        }
+
+        return $response;
+    }
 }
