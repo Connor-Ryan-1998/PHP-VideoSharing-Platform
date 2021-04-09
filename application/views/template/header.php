@@ -40,6 +40,9 @@
             </ul>
         </div>
     </nav>
+    <script type="text/javascript">
+        var baseURL = "<?php echo base_url(); ?>";
+    </script>
     <!-- <script>
         $(document).ready(function() {
             // load_data();

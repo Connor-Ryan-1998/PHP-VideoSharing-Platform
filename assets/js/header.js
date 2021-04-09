@@ -6,7 +6,7 @@ $(document).ready(function() {
         source: function(request, response) {
             // Fetch data
             $.ajax({
-                url: "<?php echo base_url(); ?>ajax/fileList",
+                url: baseURL + "ajax/fileList",
                 type: 'post',
                 dataType: "json",
                 data: {
