@@ -22,24 +22,26 @@
                     <a href="<?php echo base_url(); ?>upload"> Upload </a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <?php echo form_open('ajax'); ?>
-                <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search" name="search" aria-label="Search">
-                <button id="resultButton" class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> </button>
-                <?php echo form_close(); ?>
-                <ul class="navbar-nav my-lg-0">
-                    <?php if (!$this->session->userdata('logged_in')) : ?>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>login"> Login </a>
-                            <a href="<?php echo base_url(); ?>registration"> Register </a>
-                        </li>
-                    <?php endif; ?>
-                    <?php if ($this->session->userdata('logged_in')) : ?>
-                        <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
-                        </li>
-                    <?php endif; ?>
-                </ul>
+            <ul class="nav justify-content-center">
+                <form class="form-inline my-2 my-lg-0">
+                    <?php echo form_open('ajax'); ?>
+                    <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search" name="search" aria-label="Search">
+                    <button id="resultButton" class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> </button>
+                    <?php echo form_close(); ?>
+            </ul>
+            <ul class="navbar-nav my-lg-0">
+                <?php if (!$this->session->userdata('logged_in')) : ?>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>login"> Login </a>
+                        <a href="<?php echo base_url(); ?>registration"> Register </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($this->session->userdata('logged_in')) : ?>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
         </div>
     </nav>
     <div class="container">
@@ -70,7 +72,6 @@
                 //     select: function(event, ui) {
                 //         // Set selection
                 //         $('#search_text').val(ui.item.label); // display the selected text
-                //         // $('#userid').val(ui.item.value); // save selected id to input
                 //         return false;
                 //     }
                 // });
