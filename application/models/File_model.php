@@ -51,7 +51,6 @@ class File_model extends CI_Model
                 $response[] = array("value" => $row->id, "label" => $row->filename);
             }
         }
-
         return $response;
     }
 }
