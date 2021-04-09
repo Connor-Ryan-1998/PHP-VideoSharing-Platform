@@ -100,16 +100,21 @@
                         }
                     });
                 }
-                $('#search_text').keypress(function(event) {
-                    var keycode = (event.keyCode ? event.keyCode : event.which);
-                    if (keycode == '13') {
-                        var search = $(this).val();
-                        if (search != '') {
-                            load_data(search);
-                        } else {
-                            load_data();
-                        }
+                $('#resultButton').click(function() {
+                    var search = $(this).val();
+                    if (search != '') {
+                        load_data(search);
+                    } else {
+                        load_data();
                     }
                 });
+                // $('#search_text').keyup(function() {
+                //     var search = $(this).val();
+                //     if (search != '') {
+                //         load_data(search);
+                //     } else {
+                //         load_data();
+                //     }
+                // });
             });
         </script>
