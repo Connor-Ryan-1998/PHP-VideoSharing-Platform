@@ -20,18 +20,13 @@
                 <li class="nav-item">
                     <a href="<?php echo base_url(); ?>profile"> Profile </a>
                     <a href="<?php echo base_url(); ?>upload"> Upload </a>
-                </li>
-                <?php if (!$this->session->userdata('logged_in')) : ?>
-                    <li class="nav-item">
+                    <?php if (!$this->session->userdata('logged_in')) : ?>
                         <a href="<?php echo base_url(); ?>login"> Login </a>
                         <a href="<?php echo base_url(); ?>registration"> Register </a>
-                    </li>
-                <?php endif; ?>
-                <?php if ($this->session->userdata('logged_in')) : ?>
-                    <li class="nav-item">
+                    <?php elseif ($this->session->userdata('logged_in')) : ?>
                         <a href="<?php echo base_url(); ?>login/logout"> Logout </a>
-                    </li>
-                <?php endif; ?>
+                    <?php endif; ?>
+                </li>
             </ul>
             <ul class="nav justify-content-center">
                 <form class="form-inline my-2 my-lg-0 mx-auto">
