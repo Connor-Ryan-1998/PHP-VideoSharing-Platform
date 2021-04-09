@@ -23,10 +23,8 @@ class ajax extends CI_Controller
         // POST data
         $this->load->model('file_model');
         $postData = $this->input->post();
-        echo "<script>console.log('Debug Objects: fails before data is pulled' );</script>";
         // Get data
         $data = $this->file_model->getfileNames($postData);
-        echo "<script>console.log('Debug Objects: fails after data is pulled' );</script>";
         echo json_encode($data);
     }
 }
