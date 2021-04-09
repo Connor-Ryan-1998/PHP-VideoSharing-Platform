@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
     <!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 </head>
 
