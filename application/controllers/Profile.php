@@ -37,10 +37,10 @@ class Profile extends CI_Controller
                 $this->session->set_userdata($user_data); //set user status to login in session
                 redirect('login', $data); // direct user home page
             } else {
-                $this->load->view('login', $data);    //if username password incorrect, show error msg and ask user to login
+                $this->load->view('login', $data);
             }
         } else { {
-                redirect('login'); //if user already logined direct user to home page
+                redirect('login', $data); //if user already logined direct user to home page
             }
             $this->load->view('template/footer');
         }
