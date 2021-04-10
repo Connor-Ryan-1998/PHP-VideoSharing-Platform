@@ -5,7 +5,7 @@
                 One of three columns
             </div>
             <div class="col-sm">
-                Main area for data
+                Main area for data. Video + comments?
             </div>
             <div class="col-sm">
                 Main area for data2

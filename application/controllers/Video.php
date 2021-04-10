@@ -14,13 +14,13 @@ class Video extends CI_Controller
                 {
                     $user_data = array('username' => $username, 'logged_in' => true);
                     $this->session->set_userdata($user_data); //set user status to login in session
-                    $this->load->view('file', array('error' => ' ')); //if user already logined show upload page
+                    $this->load->view('video', array('error' => ' ')); //if user already logined show upload page
                 }
             } else {
                 redirect('login'); //if user already logined direct user to home page
             }
         } else {
-            $this->load->view('file', array('error' => ' ')); //if user already logined show login page
+            $this->load->view('video', array('error' => ' ')); //if user already logined show login page
         }
         $this->load->view('template/footer');
     }
@@ -36,13 +36,13 @@ class Video extends CI_Controller
                 {
                     $user_data = array('username' => $username, 'logged_in' => true);
                     $this->session->set_userdata($user_data); //set user status to login in session
-                    $this->load->view('file', array('error' => ' ')); //if user already logined show upload page
+                    $this->load->view('videodetail'); //if user already logined show upload page
                 }
             } else {
                 redirect('login'); //if user already logined direct user to home page
             }
         } else {
-            $this->load->view('file', array('error' => ' ')); //if user already logined show login page
+            $this->load->view('videodetail'); //if user already logined show login page
         }
         $this->load->view('template/footer');
     }

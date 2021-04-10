@@ -4,7 +4,6 @@
     <title>Video Sharing Platform</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
-    <!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.6.0.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
@@ -13,7 +12,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>mainpage">Video Sharing Platform</a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>video">Video Sharing Platform</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,6 +21,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a href="<?php echo base_url(); ?>profile"> Profile </a>
+                    <a href="<?php echo base_url(); ?>video"> Video </a>
                     <a href="<?php echo base_url(); ?>upload"> Upload </a>
                     <?php if (!$this->session->userdata('logged_in')) : ?>
                         <a href="<?php echo base_url(); ?>login"> Login </a>

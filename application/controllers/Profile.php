@@ -35,7 +35,7 @@ class Profile extends CI_Controller
                     'logged_in' => true     //create session variable
                 );
                 $this->session->set_userdata($user_data); //set user status to login in session
-                redirect('login'); // direct user home page
+                redirect('login', $data); // direct user home page
             } else {
                 $this->load->view('login', $data);    //if username password incorrect, show error msg and ask user to login
             }
