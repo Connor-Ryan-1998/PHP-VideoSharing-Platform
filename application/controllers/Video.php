@@ -26,7 +26,6 @@ class Video extends CI_Controller
     }
     public function SearchVideo($videoId)
     {
-        echo "<script>console.log('Debug Objects: " . $videoId . "' );</script>";
         $this->load->view('template/header');
         if (!$this->session->userdata('logged_in')) //check if user already login
         {
