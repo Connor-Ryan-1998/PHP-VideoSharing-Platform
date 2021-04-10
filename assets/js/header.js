@@ -21,7 +21,7 @@ $(document).ready(function() {
             // Set selection
             $('#search_text').val(ui.item.label); // display the selected text
             console.log(ui.item);
-            window.location.replace(baseURL+"video/SearchVideo/" + ui.item.id);
+            window.location.replace(baseURL+"video/SearchVideo/" + ui.item.value);
             return false;
         }
     });
