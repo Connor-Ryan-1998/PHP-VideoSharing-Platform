@@ -9,13 +9,14 @@ class Profile extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->view('template/header');
+        $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Please Login to view this page! </div> ";
         if ($this->session->userdata('logged_in')) {
             $this->load->model('user_model');
             $username = $_SESSION['username'];
             $data = $this->user_model->userData($username);
             $this->load->view('profile', $data[0]);
         } else {
-            $this->load->view('login');
+            $this->load->view('login', $data);
         }
         $this->load->view('template/footer');
     }
@@ -35,12 +36,12 @@ class Profile extends CI_Controller
                     'logged_in' => true     //create session variable
                 );
                 $this->session->set_userdata($user_data); //set user status to login in session
-                redirect('login', $data); // direct user home page
+                redirect('login'); // direct user home page
             } else {
-                $this->load->view('login', $data);
+                $this->load->view('login', $data);    //if username password incorrect, show error msg and ask user to login
             }
         } else { {
-                redirect('login', $data); //if user already logined direct user to home page
+                redirect('login'); //if user already logined direct user to home page
             }
             $this->load->view('template/footer');
         }
