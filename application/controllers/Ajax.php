@@ -27,4 +27,19 @@ class ajax extends CI_Controller
         $data = $this->file_model->getfileNames($postData);
         echo json_encode($data);
     }
+    public function fetchRecent()
+    {
+        $this->load->model('file_model');
+        $output = '';
+        $query = 'let';
+        if ($this->input->get('query')) {
+            $query = $this->input->get('query');
+        }
+        $data = $this->file_model->fetch_data($query);
+        if (!$data == null) {
+            echo json_encode($data->result());
+        } else {
+            echo "";
+        }
+    }
 }

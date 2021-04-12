@@ -1,3 +1,4 @@
+<script src="<?php echo base_url(); ?>assets/js/video.js"></script>
 <div class="row justify-content-center">
     <div class="container">
         <div class="row">
@@ -5,7 +6,10 @@
                 One of three columns
             </div>
             <div class="col-sm">
-                Main area for data
+                Most recently Uploaded Videos
+                <div class="container" id="videoList">
+                    <!-- Content here -->
+                </div>
             </div>
             <div class="col-sm">
                 Main area for data2
