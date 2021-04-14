@@ -1,14 +1,14 @@
 $(document).ready(function() {
         load_data();
 
-        function load_data(query) {
+        function load_data() {
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
                 method: "GET",
                 data: {
-                    query: query
+                    filename : filename
                 },
-                success: function(response) {
+                success: function(data) {
                     $('#videoList').html("");
                     if (response == "") {
                         $('#videoList').html(response);
