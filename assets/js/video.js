@@ -3,7 +3,7 @@ $(document).ready(function() {
 
         function load_data(query) {
             $.ajax({
-                url: "<?php echo base_url(); ?>ajax/fetchRecent",
+                url: baseURL + "ajax/fetchRecent",
                 method: "GET",
                 data: {
                     query: query
