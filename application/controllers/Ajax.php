@@ -35,6 +35,7 @@ class ajax extends CI_Controller
         if ($this->input->get('query')) {
             $query = $this->input->get('query');
         }
+        echo '<script>console.log(1)</script>';
         $data = $this->file_model->fetch_data($query);
         if (!$data == null) {
             echo json_encode($data->result());
