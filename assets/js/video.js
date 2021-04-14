@@ -2,6 +2,7 @@ $(document).ready(function() {
         load_data();
 
         function load_data() {
+            console.log("ruh ro");
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
                 method: "GET",
