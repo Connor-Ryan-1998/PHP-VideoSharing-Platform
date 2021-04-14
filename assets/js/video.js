@@ -9,7 +9,7 @@ $(document).ready(function() {
                 data: {
                     filename : filename
                 },
-                success: function(data) {
+                success: function(response) {
                     $('#videoList').html("");
                     if (response == "") {
                         $('#videoList').html(response);
