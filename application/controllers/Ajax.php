@@ -29,13 +29,14 @@ class ajax extends CI_Controller
     }
     public function fetchRecent()
     {
+        echo '<script>console.log(1)</script>';
         $this->load->model('file_model');
         $output = '';
         $query = 'let';
         if ($this->input->get('query')) {
             $query = $this->input->get('query');
         }
-
+        echo '<script>console.log(1)</script>';
         $data = $this->file_model->fetch_data($query);
         if (!$data == null) {
             echo json_encode($data->result());

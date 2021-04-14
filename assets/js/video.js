@@ -25,7 +25,10 @@ $(document).ready(function() {
                             $('#videoList').html("Not Found!");
                         };
                     };
-                }
+                },
+                error: function() {
+                    console.log("ruh ro");
+                 }                
             });
         }
 });
