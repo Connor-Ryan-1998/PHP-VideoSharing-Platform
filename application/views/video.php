@@ -19,3 +19,6 @@
 </div>
 <h3></h3>
 <div class="main"> </div>
+<script type="text/javascript">
+    var baseURL = "<?php echo base_url(); ?>";
+</script>
