@@ -6,9 +6,7 @@ $(document).ready(function() {
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
                 method: "GET",
-                data: {
-                    filename : query
-                },
+                data: {id : id, filename : filename},
                 success: function(response) {
                     $('#videoList').html("");
                     if (response == "") {

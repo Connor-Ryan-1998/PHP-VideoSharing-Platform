@@ -53,4 +53,14 @@ class File_model extends CI_Model
         }
         return $response;
     }
+
+    function fetchRecentlyUploaded()
+    {
+        $this->db->select("id, filename");
+        $this->db->from("userFiles");
+        $this->db->like('filename', $query);
+        $this->db->or_like('username', $query);
+        $this->db->order_by('filename', 'DESC');
+        return $this->db->get();
+    }
 }
