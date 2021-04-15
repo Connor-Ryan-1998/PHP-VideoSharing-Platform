@@ -7,7 +7,7 @@ $(document).ready(function() {
                 url: baseURL + "ajax/fetchRecent",
                 method: "GET",
                 data: {
-                    filename : filename
+                    filename : query
                 },
                 success: function(response) {
                     $('#videoList').html("");
