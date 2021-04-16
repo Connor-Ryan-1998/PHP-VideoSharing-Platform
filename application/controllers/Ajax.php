@@ -31,7 +31,7 @@ class ajax extends CI_Controller
     {
         $this->load->model('file_model');
         $data = $this->file_model->fetchRecentlyUploaded();
-        echo "<script>console.log(" + "1" + ");</script>";
+        echo 1;
         // echo json_encode($data->result());
     }
 }
