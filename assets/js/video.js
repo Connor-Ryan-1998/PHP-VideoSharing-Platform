@@ -4,7 +4,7 @@ $(document).ready(function() {
         function load_data() {
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
-                method: "POST",
+                method: "GET",
                 success: function(data) {
                     $('#videoList').html("");
                     if (data == "") {
@@ -15,7 +15,7 @@ $(document).ready(function() {
                             var items = [];
                             $.each(obj, function(i, val) {
                                 items.push($("<h4>").text(val.filename));
-                                items.push($('<video width="320" height="240" controls><source  src="' + '<?php echo base_url(); ?>/uploads/' + val.filename + '" type="video/mp4"></video>'));
+                                items.push($('<video width="320" height="240" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>'));
                             });
                             $('#videoList').append.apply($('#videoList'), items);
                         } else {
