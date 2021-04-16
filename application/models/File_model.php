@@ -61,7 +61,7 @@ class File_model extends CI_Model
     }
     function fetchVideoDetail($videoId)
     {
-        $query = $this->db->query("select id, filename from userFiles where id = " + $videoId);
+        $query = $this->db->query("select id, filename from userFiles where id = {$videoId}");
         return $query->result();
     }
 }
