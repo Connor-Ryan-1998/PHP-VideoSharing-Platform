@@ -6,7 +6,6 @@ $(document).ready(function() {
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
                 method: "POST",
-                data: {id : id, filename : filename},
                 success: function(data) {
                     $('#videoList').html("");
                     if (data == "") {
