@@ -33,4 +33,10 @@ class ajax extends CI_Controller
         $data = $this->file_model->fetchRecentlyUploaded();
         echo json_encode($data);
     }
+    public function fetchVideoDetail()
+    {
+        $this->load->model('file_model');
+        $data = $this->file_model->fetchVideoDetail($this->input->cookie('videoDetailId', false));
+        echo json_encode($data);
+    }
 }
