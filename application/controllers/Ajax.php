@@ -29,8 +29,9 @@ class ajax extends CI_Controller
     }
     public function fetchRecent()
     {
-        $this->load->model('file_model');
-        $data = $this->file_model->fetchRecentlyUploaded();
-        return json_encode($data->result());
+        // $this->load->model('file_model');
+        // $data = $this->file_model->fetchRecentlyUploaded();
+        // echo json_encode($data->result());
+        echo "toottoot";
     }
 }
