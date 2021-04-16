@@ -6,7 +6,7 @@ $(document).ready(function() {
                 url: baseURL + "ajax/fetchRecent",
                 method: "GET",
                 success: function(data) {
-                    console.log(data);
+                    console.log("success");
                     // $('#videoList').html("");
                     // if (data == "") {
                     //     $('#videoList').html(data);
