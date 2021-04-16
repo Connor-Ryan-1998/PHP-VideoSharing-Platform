@@ -5,14 +5,14 @@ $(document).ready(function() {
             console.log("ruh ro");
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
-                method: "GET",
+                method: "POST",
                 data: {id : id, filename : filename},
-                success: function(response) {
+                success: function(data) {
                     $('#videoList').html("");
-                    if (response == "") {
-                        $('#videoList').html(response);
+                    if (data == "") {
+                        $('#videoList').html(data);
                     } else {
-                        var obj = JSON.parse(response);
+                        var obj = JSON.parse(data);
                         if (obj.length > 0) {
                             var items = [];
                             $.each(obj, function(i, val) {
