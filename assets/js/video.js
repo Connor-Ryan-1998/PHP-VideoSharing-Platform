@@ -4,7 +4,7 @@ $(document).ready(function() {
         function load_data() {
             $.ajax({
                 url: baseURL + "ajax/fetchRecent",
-                method: "POST",
+                method: "GET",
                 success: function(data) {
                     console.log(data);
                     // $('#videoList').html("");
