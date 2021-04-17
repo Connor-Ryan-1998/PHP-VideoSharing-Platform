@@ -5,6 +5,7 @@ class Profile extends CI_Controller
 {
     public function index()
     {
+        $data['error'] = "";
         $this->load->database();
         $this->load->helper('url');
         $this->load->helper('form');
