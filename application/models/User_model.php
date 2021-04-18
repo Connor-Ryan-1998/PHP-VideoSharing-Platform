@@ -11,10 +11,12 @@ class User_model extends CI_Model
         $this->db->where('password', $password);
         $result = $this->db->get('users')->result_array();
 
-        if (password_verify($password, $result[0])) {
-            return true;
-        } else {
-            return false;
+        foreach ($result as $row) {
+            if (password_verify($password, $row['password'])) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
     public function userData($username)
