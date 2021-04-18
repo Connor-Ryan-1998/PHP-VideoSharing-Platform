@@ -9,51 +9,50 @@ class login extends CI_Controller
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->view('template/header');
-		if (!$this->session->userdata('logged_in')) //check if user already login
-		{
-			if (get_cookie('remember')) { // check if user activate the "remember me" feature  
-				$username = get_cookie('username'); //get the username from cookie
-				$password = get_cookie('password'); //get the username from cookie
-				if ($this->user_model->login($username, $password)) //check username and password correct
-				{
+		if (!$this->session->userdata('logged_in')) {
+			if (get_cookie('remember')) {
+				$username = get_cookie('username');
+				$password = get_cookie('password');
+				if ($this->user_model->login($username, $password)) {
 					$user_data = array(
 						'username' => $username,
-						'logged_in' => true 	//create session variable
+						'logged_in' => true
 					);
-					$this->session->set_userdata($user_data); //set user status to login in session
-					$this->load->view('welcome_message'); //if user already logined show main page
+					$this->session->set_userdata($user_data);
+					$this->load->view('video', array('error' => ' '));
 				}
 			} else {
-				$this->load->view('login', $data);	//if username password incorrect, show error msg and ask user to login
+				$this->load->view('login', $data);
 			}
 		} else {
-			$this->load->view('welcome_message'); //if user already logined show main page
+			$this->load->view('video', array('error' => ' '));
 		}
 		$this->load->view('template/footer');
 	}
 	public function check_login()
 	{
-		$this->load->model('user_model');		//load user model
+		$this->load->model('user_model');
 		$data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->view('template/header');
-		$username = $this->input->post('username'); //getting username from login form
-		$password = $this->input->post('password'); //getting password from login form
-		if (!$this->session->userdata('logged_in')) {	//Check if user already login
-			if ($this->user_model->login($username, $password)) //check username and password
-			{
+		$username = $this->input->post('username');
+
+		///TODO: May need to review below.
+		$password = password_hash($this->input->post('password'), "sha256");
+		if (!$this->session->userdata('logged_in')) {
+			if ($this->user_model->login($username, $password)) {
 				$user_data = array(
 					'username' => $username,
-					'logged_in' => true 	//create session variable
+					'logged_in' => true
 				);
-				$this->session->set_userdata($user_data); //set user status to login in session
-				redirect('login'); // direct user home page
+				$this->session->set_userdata($user_data);
+				redirect('login');
 			} else {
-				$this->load->view('login', $data);	//if username password incorrect, show error msg and ask user to login
+				$this->load->view('login', $data);
 			}
 		} else { {
-				redirect('login'); //if user already logined direct user to home page
+				redirect('login');
 			}
 			$this->load->view('template/footer');
 		}
@@ -61,7 +60,7 @@ class login extends CI_Controller
 
 	public function logout()
 	{
-		$this->session->unset_userdata('logged_in'); //delete login status
-		redirect('login'); // redirect user back to login
+		$this->session->unset_userdata('logged_in');
+		redirect('login');
 	}
 }
