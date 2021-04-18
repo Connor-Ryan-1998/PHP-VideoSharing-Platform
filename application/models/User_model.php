@@ -6,11 +6,12 @@ class User_model extends CI_Model
     public function login($username, $password)
     {
         // Validate
+        $this->db->select('password');
         $this->db->where('username', $username);
         $this->db->where('password', $password);
         $result = $this->db->get('users')->result_array();
 
-        if (password_verify($password, $result['password'])) {
+        if (password_verify($password, $result[0])) {
             return true;
         } else {
             return false;
