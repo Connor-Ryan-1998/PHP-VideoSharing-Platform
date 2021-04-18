@@ -56,12 +56,7 @@ class File_model extends CI_Model
 
     function fetchRecentlyUploaded()
     {
-        $query = $this->db->query("select id, filename from userFiles where filename like '%mp4%'");
-        return $query->result();
-    }
-    function fetchVideoDetail($videoId)
-    {
-        $query = $this->db->query("select id, filename from userFiles where id = {$videoId}");
+        $query = $this->db->query("select id, filename from userFiles order by id desc'");
         return $query->result();
     }
 }

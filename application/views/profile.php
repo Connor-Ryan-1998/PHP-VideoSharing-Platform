@@ -10,6 +10,9 @@
                             <input type="file" name="userfile" size="20" />
                         </div>
                         <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Description" name="description">
+                        </div>
+                        <div class="form-group">
                             <input type="submit" value="upload" />
                         </div>
                     </div>
