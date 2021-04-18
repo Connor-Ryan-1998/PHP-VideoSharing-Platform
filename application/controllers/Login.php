@@ -38,8 +38,7 @@ class login extends CI_Controller
 		$this->load->view('template/header');
 		$username = $this->input->post('username');
 
-		///TODO: May need to review below.
-		$password = password_hash($this->input->post('password'), "sha256");
+		$password = $this->input->post('password');
 		if (!$this->session->userdata('logged_in')) {
 			if ($this->user_model->login($username, $password)) {
 				$user_data = array(

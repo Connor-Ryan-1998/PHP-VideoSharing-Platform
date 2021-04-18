@@ -1,5 +1,4 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-//put your code here
 class User_model extends CI_Model
 {
 
@@ -9,9 +8,9 @@ class User_model extends CI_Model
         // Validate
         $this->db->where('username', $username);
         $this->db->where('password', $password);
-        $result = $this->db->get('users');
+        $result = $this->db->get('users')->result_array();
 
-        if ($result->num_rows() == 1) {
+        if (password_verify($password, $result['password'])) {
             return true;
         } else {
             return false;
