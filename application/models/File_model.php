@@ -56,7 +56,7 @@ class File_model extends CI_Model
 
     function fetchRecentlyUploaded()
     {
-        $query = $this->db->query("select id, filename from userFiles order by id desc'");
+        $query = $this->db->query("select id, filename from userFiles ORDER BY id DESC'");
         return $query->result();
     }
 }
