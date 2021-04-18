@@ -16,7 +16,7 @@ $(document).ready(function() {
                             $.each(obj, function(i, val) {
                                 items.push($("<h4>").text(val.filename));
                                 items.push($('<video width="320" height="240" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>'));
-                                items.push($("<h4>".text(val.description)));
+                                items.push($("<h4>").text(val.description));
                             });
                             $('#videoDetail').append.apply($('#videoDetail'), items);
                         } else {
