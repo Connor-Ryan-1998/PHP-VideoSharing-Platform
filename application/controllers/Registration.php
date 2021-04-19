@@ -21,13 +21,13 @@ class Registration extends CI_Controller
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->view('template/header');
+
+
 		$username = $this->input->post('username');
 		$emailAddress = $this->input->post('emailAddress');
-		$options = [
-			'cost' => 12,
-		];
-		$password = password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options);
+		$password = $this->input->post('password');
 
+		//Passsword Validation
 		if (strlen($password) < 5 or !(1 === preg_match('~[0-9]~', $password))) {
 			$this->load->view('registration', $data);
 		} else if (!(filter_var($emailAddress, FILTER_VALIDATE_EMAIL))) {
