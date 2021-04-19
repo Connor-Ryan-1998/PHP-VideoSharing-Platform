@@ -10,8 +10,8 @@ class User_model extends CI_Model
         $this->db->where('username', $username);
         $this->db->where('password', $password);
         $result = $this->db->get('users')->result_array();
-
         foreach ($result as $row) {
+            echo "<script>console.log('Debug Objects: {$password}, {$row['password']}' );</script>";
             if (password_verify($password, $row['password'])) {
                 return true;
             } else {
