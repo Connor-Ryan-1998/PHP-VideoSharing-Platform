@@ -8,7 +8,6 @@ class User_model extends CI_Model
         // Validate
         $this->db->select('password');
         $this->db->where('username', $username);
-        $this->db->where('password', $password);
         $result = $this->db->get('users')->result_array();
         foreach ($result as $row) {
             echo "<script>console.log('Debug Objects: {$password}, {$row['password']}' );</script>";
