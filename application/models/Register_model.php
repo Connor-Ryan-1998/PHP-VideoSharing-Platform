@@ -6,6 +6,9 @@ class Register_model extends CI_Model
         ///Hash Password
         $password = password_hash($password, PASSWORD_DEFAULT);
 
+        //User Unique Verification Code
+        $uid = uniqid();
+
         //Get Max id
         $this->db->select_max('id');
         $result = $this->db->get('users')->result_array();
@@ -14,14 +17,15 @@ class Register_model extends CI_Model
                 'id' => (int)$row['id'] + 1,
                 'username' => $username,
                 'emailAddress' => $emailAddress,
-                'password' => $password
+                'password' => $password,
+                'userUID' => $uid
             );
         }
         //Insert New Record
         $query = $this->db->insert('users', $data);
-        // $this->send($emailAddress);
+        $this->send($emailAddress, $uid);
     }
-    public function send($emailAddress)
+    public function send($emailAddress, $uid)
     {
         $config = array(
             'protocol' => 'smtp',
@@ -35,7 +39,7 @@ class Register_model extends CI_Model
             'newline' => "\r\n"
         );
 
-        $message = "";
+        $message = "Hello {$emailAddress}: Please enter your UID in the profile page to verify your account: {$uid}";
 
         $this->email->initialize($config);
         $this->email->from(get_current_user() . '@student.uq.edu.au', get_current_user());
