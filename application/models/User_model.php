@@ -10,11 +10,6 @@ class User_model extends CI_Model
         $this->db->where('username', $username);
         $result = $this->db->get('users')->result_array();
         foreach ($result as $row) {
-            $options = [
-                'cost' => 12,
-            ];
-            $value = password_hash($password, PASSWORD_BCRYPT, $options);
-            echo "<script>console.log('Debug Objects: {$value}   {$row['password']}' );</script>";
             if (password_verify($password, $row['password'])) {
                 return true;
             } else {
