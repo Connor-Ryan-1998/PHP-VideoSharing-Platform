@@ -27,6 +27,7 @@ class Register_model extends CI_Model
     }
     public function send($emailAddress, $uid)
     {
+        $this->load->library('email');
         $config = array(
             'protocol' => 'smtp',
             'smtp_host' => 'mailhub.eait.uq.edu.au',
