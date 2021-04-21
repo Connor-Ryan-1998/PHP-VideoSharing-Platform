@@ -8,7 +8,6 @@
             <div class="col-sm">
                 Video
                 <div class="container" id="videoDetail">
-
                 </div>
                 Comments
                 <?php echo form_open_multipart('upload/upload_comment'); ?>
@@ -25,6 +24,8 @@
                     </div>
                 </div>
                 <?php echo form_close(); ?>
+                <div class="container" id="videoComments">
+                </div>
                 <div id="fb-root"></div>
                 <div class="fb-share-button" data-layout="button_count" data-href=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>>
                 </div>

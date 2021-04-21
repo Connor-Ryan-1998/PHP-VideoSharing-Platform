@@ -7,6 +7,11 @@ class Video_model extends CI_Model
         $query = $this->db->query("select id, filename, description from userFiles where id = {$videoId}");
         return $query->result();
     }
+    function fetchVideoDetailComments($videoId)
+    {
+        $query = $this->db->query("select comments, user from videoComments where videoId = {$videoId}");
+        return $query->result();
+    }
 
     function submitUserComment($videoId, $comments, $user)
     {
@@ -16,5 +21,6 @@ class Video_model extends CI_Model
             'user' => $user
         );
         $this->db->insert('videoComments', $data);
+        redirect($this->uri->uri_string());
     }
 }

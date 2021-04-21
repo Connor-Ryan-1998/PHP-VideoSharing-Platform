@@ -19,7 +19,7 @@ class Video extends CI_Controller
         );
         $this->input->set_cookie($cookieVideo);
         $this->load->view('template/header');
-        $this->load->view('videodetail'); //if user already logined show login page
+        $this->load->view('videodetail');
         $this->load->view('template/footer');
     }
 }
