@@ -187,7 +187,8 @@ $config['enable_query_strings'] = FALSE;
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
-
+$config['google_key'] = '6LdJMbMaAAAAAIuU0Xna206EdRddxuYrGD6dKVoe';
+$config['google_secret'] = '6LdJMbMaAAAAALfyfqW7bq6Dwx32_9VvRPIdBnDk';
 /*
 |--------------------------------------------------------------------------
 | Allow $_GET array

@@ -11,6 +11,7 @@
         <div class="form-group">
             <?php echo $error; ?>
         </div>
+        <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Log in</button>
         </div>
