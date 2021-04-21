@@ -13,7 +13,7 @@ class Video_model extends CI_Model
         $data = array(
             'videoId' => $videoId,
             'comments' => $comments,
-            'user' => '$user'
+            'user' => $user
         );
         $this->db->insert('mytable', $data);
     }
