@@ -10,6 +10,10 @@
     <script src="<?php echo base_url(); ?>assets/js/header.js"></script>
     <link rel="icon" href="<?= base_url() ?>assets/favicon.ico">
     <!-- Icon Referencine on this line <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Video Sharing Website" />
+    <meta property="og:description" content="For all your Uni student needs" />
+    <meta property="og:image" content="<?= base_url() ?>assets/favicon.ico" />
 </head>
 
 <body>

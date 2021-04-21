@@ -25,6 +25,9 @@
                     </div>
                 </div>
                 <?php echo form_close(); ?>
+                <div id="fb-root"></div>
+                <div class="fb-share-button" data-href=<?php "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?> data-layout="button_count">
+                </div>
             </div>
             <div class="col-sm">
                 Main area for data2
@@ -34,3 +37,17 @@
 </div>
 <h3></h3>
 <div class="main"> </div>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function getURL() {
+        alert("The URL of this page is: " + window.location.href);
+    }
+</script>
