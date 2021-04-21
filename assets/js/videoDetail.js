@@ -1,5 +1,6 @@
 $(document).ready(function() {
         load_data();
+        load_Comments();
 
         function load_data() {
             $.ajax({
@@ -26,7 +27,7 @@ $(document).ready(function() {
                 },              
             });
         }
-        function load_data() {
+        function load_Comments() {
             $.ajax({
                 url: baseURL + "ajax/fetchVideoDetailComments",
                 method: "GET",
