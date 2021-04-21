@@ -23,7 +23,7 @@ class Profile extends CI_Controller
     }
     public function updatePersonnelData()
     {
-        $this->load->model('user_model');        //load user model
+        $this->load->model('user_model');
         $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
         $this->load->helper('form');
         $this->load->helper('url');

@@ -31,9 +31,22 @@
                     <input type="text" class="form-control" placeholder="EmailAddress" value=<?php echo $emailAddress; ?> name="emailAddress">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" value=<?php echo $password; ?> required="required" name="password">
-                </div>
-                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Verification Code" name="verificationCode">
+                    <?php if ($isVerified) : ?>
+                        <div class="form-group">
+                            <input class="form-check-input" type="checkbox" value="" id="isVerified" checked disabled>
+                            <label class="form-check-label" for="isVerified">
+                                Verified
+                            </label>
+                        </div>
+                    <?php else : ?>
+                        <div class="form-group">
+                            <input class="form-check-input" type="checkbox" value="" id="isVerified" disabled>
+                            <label class="form-check-label" for="isVerified">
+                                Verified
+                            </label>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Update Data</button>
