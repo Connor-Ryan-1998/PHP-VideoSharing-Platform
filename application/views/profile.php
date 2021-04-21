@@ -31,7 +31,6 @@
                     <input type="text" class="form-control" placeholder="EmailAddress" value=<?php echo $emailAddress; ?> name="emailAddress">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Verification Code" name="verificationCode">
                     <?php if ($isVerified) : ?>
                         <div class="form-group">
                             <input type="text" class="form-control" readonly placeholder="Verification Code" value=<?php echo $userUID; ?> name="verificationCode">
