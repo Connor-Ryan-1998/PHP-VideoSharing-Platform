@@ -9,6 +9,7 @@ class User_model extends CI_Model
         $this->db->select('password');
         $this->db->where('username', $username);
         $result = $this->db->get('users')->result_array();
+
         foreach ($result as $row) {
             if (password_verify($password, $row['password'])) {
                 return true;
@@ -22,7 +23,16 @@ class User_model extends CI_Model
         $query = $this->db->select('*')->from('users')->where('username', $username)->get();
         return $query->result_array();
     }
-    public function verifyUID($username, $uid)
+    public function updateUserData($userDataArray)
+    {
+        $isVerified =  $this->verifyUID($userDataArray['username'], $userDataArray['verificationCode']);
+
+        $this->db->set('emailAddress', $userDataArray['emailAddress']);
+        $this->db->set('isVerified', $isVerified);
+        $this->db->where('username', $userDataArray['username']);
+        $this->db->update('users');
+    }
+    function verifyUID($username, $uid)
     {
         // Validate
         $this->db->select('userUID');
