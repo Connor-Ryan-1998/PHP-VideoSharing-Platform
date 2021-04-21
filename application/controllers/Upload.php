@@ -45,10 +45,9 @@ class Upload extends CI_Controller
     }
     public function upload_comment()
     {
-        echo "<script>console.log('Debug Objects: " . $this->input->post('comments') . "' );</script>";
         $this->load->model('video_model');
         $videoId = $this->input->cookie('videoDetailId', false);
-        $comments = $this->input->post('comments');
+        $comments = $this->input->post('submittedComments');
         $user = $this->session->userdata('username') ?? $_SERVER['REMOTE_ADDR'];
         $this->video_model->submitUserComment($videoId, $comments, $user);
     }

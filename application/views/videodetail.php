@@ -16,7 +16,7 @@
                         <div class="form-group">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Add your comments here!" name="comments">
+                            <input type="text" class="form-control" placeholder="Add your comments here!" name="submittedComments">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="upload" />
