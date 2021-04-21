@@ -34,6 +34,7 @@
                     <input type="text" class="form-control" placeholder="Verification Code" name="verificationCode">
                     <?php if ($isVerified) : ?>
                         <div class="form-group">
+                            <input type="text" class="form-control" readonly placeholder="Verification Code" value=<?php echo $userUID; ?> name="verificationCode">
                             <input class="form-check-input" type="checkbox" value="" id="isVerified" checked disabled>
                             <label class="form-check-label" for="isVerified">
                                 Verified
@@ -41,6 +42,7 @@
                         </div>
                     <?php else : ?>
                         <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Verification Code" name="verificationCode">
                             <input class="form-check-input" type="checkbox" value="" id="isVerified" disabled>
                             <label class="form-check-label" for="isVerified">
                                 Verified
