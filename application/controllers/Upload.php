@@ -47,7 +47,7 @@ class Upload extends CI_Controller
     {
         $this->load->model('video_model');
         $videoId = $this->input->cookie('videoDetailId', false);
-        $comments = $this->input->post('submittedComments');
+        $comments = $this->input->post('comments');
         $user = $this->session->userdata('username') ?? $_SERVER['REMOTE_ADDR'];
         $this->video_model->submitUserComment($videoId, $comments, $user);
     }
