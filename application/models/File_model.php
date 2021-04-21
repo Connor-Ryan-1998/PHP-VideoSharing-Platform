@@ -4,13 +4,14 @@ class File_model extends CI_Model
 {
 
     // upload file
-    public function upload($filename, $path, $username)
+    public function upload($filename, $path, $username, $description)
     {
 
         $data = array(
             'filename' => $filename,
             'path' => $path,
-            'username' => $username
+            'username' => $username,
+            'description' => $description
         );
         $query = $this->db->insert('userFiles', $data);
     }
