@@ -26,7 +26,7 @@
                 </div>
                 <?php echo form_close(); ?>
                 <div id="fb-root"></div>
-                <div class="fb-share-button" data-href=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?> data-layout="button_count">
+                <div class="fb-share-button" data-layout="button_count" data-href=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>>
                 </div>
             </div>
             <div class="col-sm">
