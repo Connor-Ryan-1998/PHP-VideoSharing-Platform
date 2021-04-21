@@ -9,6 +9,8 @@
                         <div class="form-group">
                             <input type="file" name="userfile" size="20" />
                         </div>
+                        <div class="dropzone">
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Description" name="description">
                         </div>

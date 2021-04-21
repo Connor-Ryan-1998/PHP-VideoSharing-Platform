@@ -2,15 +2,24 @@
 
 <head>
     <title>Video Sharing Platform</title>
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/js/dropzone/dropzone.min.css" />
+
+    <!-- javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/header.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/dropzone/dropzone.min.js"></script>
+
+
     <link rel="icon" href="<?= base_url() ?>assets/favicon.ico">
     <!-- Icon Referencine on this line <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+
+    <!-- reCaptcah Config -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Video Sharing Website" />
     <meta property="og:description" content="For all your Uni student needs" />
