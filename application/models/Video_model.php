@@ -7,4 +7,14 @@ class Video_model extends CI_Model
         $query = $this->db->query("select id, filename, description from userFiles where id = {$videoId}");
         return $query->result();
     }
+
+    function submitUserComment($videoId, $comments, $user)
+    {
+        $data = array(
+            'videoId' => $videoId,
+            'comments' => $comments,
+            'user' => '$user'
+        );
+        $this->db->insert('mytable', $data);
+    }
 }

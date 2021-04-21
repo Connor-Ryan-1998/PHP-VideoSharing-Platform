@@ -11,7 +11,7 @@
 
                 </div>
                 Comments
-                <?php echo form_open_multipart('upload/do_upload'); ?>
+                <?php echo form_open_multipart('upload/upload_comment'); ?>
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-md-offset-6 centered">
                         <div class="form-group">

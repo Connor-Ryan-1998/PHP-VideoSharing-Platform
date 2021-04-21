@@ -43,4 +43,11 @@ class Upload extends CI_Controller
             $this->load->view('template/footer');
         }
     }
+    public function upload_comment()
+    {
+        $this->load->model('video_model');
+        $videoId = $this->input->cookie('videoDetailId', false);
+        $comments = $this->input->post('comments');
+        $user = $this->session->userdata('username') ?? $_SERVER['REMOTE_ADDR'];
+    }
 }
