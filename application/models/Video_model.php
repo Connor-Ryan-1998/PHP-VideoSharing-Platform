@@ -20,7 +20,6 @@ class Video_model extends CI_Model
             'comments' => $comments,
             'user' => $user
         );
-        echo "<script>console.log('Debug Objects: " . $data['comments'] . "' );</script>";
         $this->db->insert('videoComments', $data);
         redirect($this->uri->uri_string());
     }
