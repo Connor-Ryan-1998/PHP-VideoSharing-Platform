@@ -11,9 +11,9 @@
         <div class="form-group">
             <?php echo $error; ?>
         </div>
-        <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?>"></div>
+        <div class="g-recaptcha" data-sitekey="<?php echo $this->config->item('google_key') ?> " data-callback="enableBtn"></div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            <button type="submit" id="loginBtn" class="btn btn-primary btn-block" disabled="disabled">Log in</button>
         </div>
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox" name="remember"> Remember me</label>
@@ -22,3 +22,9 @@
         <?php echo form_close(); ?>
     </div>
 </div>
+
+<script type="text/javascript">
+    function enableBtn() {
+        document.getElementById("loginBtn").disabled = false;
+    }
+</script>
