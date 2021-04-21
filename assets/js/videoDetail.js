@@ -26,32 +26,32 @@ $(document).ready(function() {
                 },              
             });
         }
-        function load_data() {
-            $.ajax({
-                url: baseURL + "ajax/fetchVideoDetailComments",
-                method: "GET",
-                success: function(data) {
-                    $('#videoComments').html("");
-                    if (data == "") {
-                        $('#videoComments').html(data);
-                    } else {
-                        var obj = JSON.parse(data);
-                        if (obj.length > 0) {
-                            var items = [];
-                            $.each(obj, function(i, val) {
-                                items.push($('<div class="card" style="width: 18rem;">\
-                                                    <div class="card-body">\
-                                                        <h5 class="card-title">' + val.user + '</h5>\
-                                                        <p class="card-text">' + val.comments + '</p>\
-                                                    </div>\
-                                                </div>'));
-                            });
-                            $('#videoComments').append.apply($('#videoComments'), items);
-                        } else {
-                            $('#videoComments').html("No Comments yet!");
-                        };
-                    };
-                },              
-            });
-        }
+        // function load_data() {
+        //     $.ajax({
+        //         url: baseURL + "ajax/fetchVideoDetailComments",
+        //         method: "GET",
+        //         success: function(data) {
+        //             $('#videoComments').html("");
+        //             if (data == "") {
+        //                 $('#videoComments').html(data);
+        //             } else {
+        //                 var obj = JSON.parse(data);
+        //                 if (obj.length > 0) {
+        //                     var items = [];
+        //                     $.each(obj, function(i, val) {
+        //                         items.push($('<div class="card" style="width: 18rem;">\
+        //                                             <div class="card-body">\
+        //                                                 <h5 class="card-title">' + val.user + '</h5>\
+        //                                                 <p class="card-text">' + val.comments + '</p>\
+        //                                             </div>\
+        //                                         </div>'));
+        //                     });
+        //                     $('#videoComments').append.apply($('#videoComments'), items);
+        //                 } else {
+        //                     $('#videoComments').html("No Comments yet!");
+        //                 };
+        //             };
+        //         },              
+        //     });
+        // }
 });
