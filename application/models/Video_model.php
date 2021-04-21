@@ -15,6 +15,6 @@ class Video_model extends CI_Model
             'comments' => $comments,
             'user' => $user
         );
-        $this->db->insert('mytable', $data);
+        $this->db->insert('videoComments', $data);
     }
 }
