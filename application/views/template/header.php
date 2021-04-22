@@ -36,7 +36,6 @@
                 <li class="nav-item">
                     <a href="<?php echo base_url(); ?>profile"> Profile </a>
                     <a href="<?php echo base_url(); ?>video"> Video </a>
-                    <a href="<?php echo base_url(); ?>upload"> Upload </a>
                     <?php if (!$this->session->userdata('logged_in')) : ?>
                         <a href="<?php echo base_url(); ?>login"> Login </a>
                         <a href="<?php echo base_url(); ?>registration"> Register </a>

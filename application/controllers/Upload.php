@@ -2,26 +2,6 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class Upload extends CI_Controller
 {
-    public function index()
-    {
-        $this->load->view('template/header');
-        if (!$this->session->userdata('logged_in')) {
-            if (get_cookie('remember')) {
-                $username = get_cookie('username');
-                $password = get_cookie('password');
-                if ($this->user_model->login($username, $password)) {
-                    $user_data = array('username' => $username, 'logged_in' => true);
-                    $this->session->set_userdata($user_data);
-                    $this->load->view('file', array('error' => ' '));
-                }
-            } else {
-                redirect('login'); //if user already logined direct user to home page
-            }
-        } else {
-            $this->load->view('file', array('error' => ' ')); //if user already logined show login page
-        }
-        $this->load->view('template/footer');
-    }
     public function do_upload()
     {
         $this->load->model('file_model');
