@@ -5,7 +5,7 @@
             <div class="col-sm">
             </div>
             <div class="col-sm bg-light">
-                <h2> Most recently Uploaded Videos</h2>
+                <h2>Recently Uploaded Videos</h2>
                 <div class="container" id="videoList">
                     <!-- Content here -->
                 </div>

@@ -41,7 +41,7 @@ $(document).ready(function() {
                         if (obj.length > 0) {
                             var items = [];                           
                             $.each(obj, function(i, val) {
-                                items.push($('<div class="card" style="width: 18rem;">\
+                                items.push($('<div class="card" style="width: 100%;">\
                                                     <div class="card-body">\
                                                         <h5 class="card-title">' + val.user + '</h5>\
                                                         <p class="card-text">' + val.comments + '</p>\
