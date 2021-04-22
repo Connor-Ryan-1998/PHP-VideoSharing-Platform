@@ -3,16 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                One of three columns
             </div>
-            <div class="col-sm">
-                Most recently Uploaded Videos
+            <div class="col-sm bg-light">
+                <h1 class="display-2"> Most recently Uploaded Videos</h1>
                 <div class="container" id="videoList">
                     <!-- Content here -->
                 </div>
             </div>
             <div class="col-sm">
-                Main area for data2
             </div>
         </div>
     </div>
