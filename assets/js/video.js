@@ -17,7 +17,7 @@ $(document).ready(function() {
                                 items.push($('<div class="card" style="width: 20%;">\
                                                 <div class="card-body">\
                                                     <h5 class="card-title"><a href='+ baseURL+"video/SearchVideo/" + val.id+" class='text-decoration-none'>"+val.filename+'</a></h5>\
-                                                    <video width="768" height=4732" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>\
+                                                    <video width="256" height=144" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>\
                                                 </div>\
                                             </div>'));
                             });
