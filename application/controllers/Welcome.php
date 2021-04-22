@@ -32,7 +32,7 @@ class Welcome extends CI_Controller
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->view('template/header');
-		$this->load->view('welcome_message', $data);
+		$this->load->view('video', array('error' => ' '));
 		$this->load->view('template/footer');
 	}
 }
