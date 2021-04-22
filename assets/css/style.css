@@ -5,3 +5,6 @@
 #resultButton.btn:before {
     content: 'Hide Result';
 }
+.footer {
+    background-color:#212529
+}
