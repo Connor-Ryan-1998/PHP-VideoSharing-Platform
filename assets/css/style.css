@@ -1,10 +1,8 @@
-#resultButton.btn.collapsed:before {
-    content: 'Show Result';
-}
-
-#resultButton.btn:before {
-    content: 'Hide Result';
-}
 .footer {
-    background-color:#212529
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    /* background-color:#212529 */
 }
