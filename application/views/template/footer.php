@@ -1,8 +1,8 @@
 <footer>
-    <div class="navbar fixed-bottom">
+    <div class="container bg-light">
         <div class="row vcenter">
             <div class="col-xs-6">
-                <p>&copy; 2021-<?php echo date("Y"); ?></p>
+                <p> Connor Ryan S4434200 &copy; : 2021-<?php echo date("Y"); ?></p>
             </div>
         </div>
     </div>
