@@ -33,5 +33,10 @@ class Upload extends CI_Controller
         $comments = $this->input->post('comments');
         $user = $this->session->userdata('username') ?? $_SERVER['REMOTE_ADDR'];
         $this->video_model->submitUserComment($videoId, $comments, $user);
+
+        ///after complete reload to corr
+        $this->load->view('template/header');
+        $this->load->view('videodetail');
+        $this->load->view('template/footer');
     }
 }
