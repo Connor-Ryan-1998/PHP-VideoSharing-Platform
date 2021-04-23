@@ -47,7 +47,7 @@ $(document).ready(function() {
                             $.each(obj, function(i, val) {
                                 items.push($('<div class="card" style="width: 100%;">\
                                                     <div class="card-body">\
-                                                        <h5 class="card-title">' + val.user + '</h5>\
+                                                        <h5 class="card-title">' + val.user + '@' + val.CreatedDateTime + '</h5>\
                                                         <p class="card-text">' + val.comments + '</p>\
                                                     </div>\
                                                 </div>'));
