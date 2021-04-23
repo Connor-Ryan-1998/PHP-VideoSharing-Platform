@@ -18,7 +18,11 @@ $(document).ready(function() {
                                 items.push($("<h4>").text(val.filename));
                                 items.push($('<video width="560" height="420" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>'));
                                 items.push($("<h4>").text("Description"));
-                                items.push($("<h3>").text(val.description));
+                                items.push($('<div class="card" style="width: 100%;">\
+                                                <div class="card-body">\
+                                                    <p class="card-text">' + val.description + '</p>\
+                                                </div>\
+                                            </div>'));
                             });
                             $('#videoDetail').append.apply($('#videoDetail'), items);
                         } else {

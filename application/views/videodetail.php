@@ -12,12 +12,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-md-offset-6 centered">
                         <div class="form-group">
-                        </div>
-                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Add your comments here!" name="comments">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="upload" />
+                            <input type="submit" value="Add Comment" />
                         </div>
                     </div>
                 </div>
