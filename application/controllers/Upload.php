@@ -5,22 +5,20 @@ class Upload extends CI_Controller
     public function do_upload()
     {
         $this->load->model('file_model');
+        $this->load->library('../controllers/profile');
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'mp4';
         $config['max_size'] = 10000;
         $config['max_width'] = 1024;
         $config['max_height'] = 768;
+
         $this->load->library('upload', $config);
+
         if (!$this->upload->do_upload('userfile')) {
-            $this->load->view('template/header');
-            $data = array('error' => $this->upload->display_errors());
-            $this->load->view('profile', $data);
-            $this->load->view('template/footer');
+            $this->profile->index();
         } else {
             $this->file_model->upload($this->upload->data('file_name'), $this->upload->data('full_path'), $this->session->userdata('username'), $this->input->post('description'));
-            $this->load->view('template/header');
-            $this->load->view('profile', array('error' => 'File upload success. <br/>'));
-            $this->load->view('template/footer');
+            $this->profile->index();
         }
     }
     public function upload_comment()
