@@ -14,12 +14,12 @@ class Upload extends CI_Controller
         if (!$this->upload->do_upload('userfile')) {
             $this->load->view('template/header');
             $data = array('error' => $this->upload->display_errors());
-            $this->load->view('file', $data);
+            $this->load->view('profile', $data);
             $this->load->view('template/footer');
         } else {
             $this->file_model->upload($this->upload->data('file_name'), $this->upload->data('full_path'), $this->session->userdata('username'), $this->input->post('description'));
             $this->load->view('template/header');
-            $this->load->view('file', array('error' => 'File upload success. <br/>'));
+            $this->load->view('profile', array('error' => 'File upload success. <br/>'));
             $this->load->view('template/footer');
         }
     }
