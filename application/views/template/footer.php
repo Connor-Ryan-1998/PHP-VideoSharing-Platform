@@ -1,4 +1,4 @@
-<footer>
+<footer class="container bg-dark text-white w-100">
     <div class="container bg-dark text-white w-100">
         <div class="row vcenter">
             <div class="col-xs-6">
