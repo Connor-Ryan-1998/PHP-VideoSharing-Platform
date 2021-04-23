@@ -42,10 +42,10 @@ $(document).ready(function() {
                         $('#videoComments').html(data);
                     } else {
                         var obj = JSON.parse(data);
+                        console.log(obj);
                         if (obj.length > 0) {
                             var items = [];                           
                             $.each(obj, function(i, val) {
-                                console.log(val.createddatetime);
                                 items.push($('<div class="card" style="width: 100%;">\
                                                     <div class="card-body">\
                                                         <h5 class="card-title">' + val.user + ' @ ' + val.createddatetime + '</h5>\
