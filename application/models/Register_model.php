@@ -24,6 +24,7 @@ class Register_model extends CI_Model
         //Insert New Record
         $query = $this->db->insert('users', $data);
         $this->send($emailAddress, $uid);
+        return true;
     }
     public function send($emailAddress, $uid)
     {
