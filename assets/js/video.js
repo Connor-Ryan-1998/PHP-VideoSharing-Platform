@@ -18,6 +18,7 @@ $(document).ready(function() {
                                                 <div class="card-body">\
                                                     <h5 class="card-title"><a href='+ baseURL+"video/SearchVideo/" + val.id+" class='text-decoration-none'>"+val.filename+'</a></h5>\
                                                     <video width="256" height=144" controls><source  src="' + baseURL+'uploads/' + val.filename + '" type="video/mp4"></video>\
+                                                    <p>Created by'+ val.username + ' at ' + val.createddatetime + '</p>\
                                                 </div>\
                                             </div>'));
                             });
