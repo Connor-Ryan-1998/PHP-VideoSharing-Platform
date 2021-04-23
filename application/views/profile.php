@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-    <div class="container h-100">
+    <div class="container">
         <div class="row">
             <div class="col-sm">
                 Upload Video
