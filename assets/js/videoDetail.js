@@ -45,10 +45,10 @@ $(document).ready(function() {
                         if (obj.length > 0) {
                             var items = [];                           
                             $.each(obj, function(i, val) {
-                                console.log(val.CreatedDateTime);
+                                console.log(val.createddatetime);
                                 items.push($('<div class="card" style="width: 100%;">\
                                                     <div class="card-body">\
-                                                        <h5 class="card-title">' + val.user + ' @ ' + (val.CreatedDateTime).ToString() + '</h5>\
+                                                        <h5 class="card-title">' + val.user + ' @ ' + val.createddatetime + '</h5>\
                                                         <p class="card-text">' + val.comments + '</p>\
                                                     </div>\
                                                 </div>'));
