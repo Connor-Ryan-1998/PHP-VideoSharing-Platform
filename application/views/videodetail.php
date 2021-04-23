@@ -13,6 +13,7 @@
                     <div class="col-md-4 col-md-offset-6 centered">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Add your comments here!" name="comments">
+                            <br>
                             <input type="submit" value="Add Comment" />
                         </div>
                     </div>
