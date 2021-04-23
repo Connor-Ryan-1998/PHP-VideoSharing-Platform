@@ -21,6 +21,6 @@ class Video_model extends CI_Model
             'user' => $user
         );
         $this->db->insert('videoComments', $data);
-        redirect($this->uri->uri_string());
+        // redirect($this->uri->uri_string());
     }
 }
