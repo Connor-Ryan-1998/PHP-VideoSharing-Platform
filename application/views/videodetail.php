@@ -1,15 +1,13 @@
 <script src="<?php echo base_url(); ?>assets/js/videoDetail.js"></script>
-<div class="row justify-content-center">
+<div class="row justify-content-center h-100">
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-                One of three columns
+            <div class="col-md-3">
             </div>
-            <div class="col-sm">
-                Video
-                <div class="container" id="videoDetail">
+            <div class="col-md-6">
+                <h1>Video</h1>
+                <div class=" container" id="videoDetail">
                 </div>
-                Comments
                 <?php echo form_open_multipart('upload/upload_comment'); ?>
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-md-offset-6 centered">
@@ -30,14 +28,12 @@
                 <div class="fb-share-button" data-layout="button_count" data-href=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>>
                 </div>
             </div>
-            <div class="col-sm">
-                Main area for data2
+            <div class="col-md-3">
             </div>
         </div>
     </div>
 </div>
-<h3></h3>
-<div class="main"> </div>
+<br>
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

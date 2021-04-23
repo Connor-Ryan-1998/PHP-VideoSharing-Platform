@@ -32,7 +32,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-5">
                 <li class="nav-item">
                     <a href="<?php echo base_url(); ?>profile"> Profile </a>
                     <a href="<?php echo base_url(); ?>video"> Video </a>

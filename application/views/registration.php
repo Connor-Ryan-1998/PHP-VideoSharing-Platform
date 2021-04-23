@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container h-100">
     <div class="col-4 offset-4">
         <?php echo form_open(base_url() . 'registration/check_registration'); ?>
         <h2 class="text-center">Registration</h2>
