@@ -25,6 +25,9 @@ class Upload extends CI_Controller
     }
     public function upload_comment()
     {
+        $this->load->helper('form');
+        $this->load->helper('url');
+
         $this->load->model('video_model');
         $videoId = $this->input->cookie('videoDetailId', false);
         $comments = $this->input->post('comments');

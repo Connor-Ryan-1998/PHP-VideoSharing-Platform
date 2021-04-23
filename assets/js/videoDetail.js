@@ -33,7 +33,6 @@ $(document).ready(function() {
                 method: "GET",
                 success: function(data) {
                     $('#videoComments').html("");
-                    console.log(data);
                     if (data == "") {
                         $('#videoComments').html(data);
                     } else {
