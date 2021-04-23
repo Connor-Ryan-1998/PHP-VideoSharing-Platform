@@ -47,8 +47,5 @@ class Register_model extends CI_Model
         $this->email->subject('PHP-VideoSharing-Platform Email Verification');
         $this->email->message($message);
         $this->email->send();
-        $this->load->view('template/header');
-        $this->load->view('login');
-        $this->load->view('template/footer');
     }
 }

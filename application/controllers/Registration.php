@@ -34,8 +34,8 @@ class Registration extends CI_Controller
 			$this->load->view('registration', $data);
 		} else {
 			if ($this->register_model->register_user($username, $emailAddress, $password)) {
-				$data['error'] = "<div class=\"alert\" role=\"alert\"> Account has been registered, please visit the login page to log in</div>";
-				$this->load->view('registration', $data);
+				$data['error'] = "<div class=\"alert\" role=\"alert\"> Account has been registered, Please log in</div>";
+				$this->load->view('login', $data);
 			}
 		}
 		$this->load->view('template/footer');
