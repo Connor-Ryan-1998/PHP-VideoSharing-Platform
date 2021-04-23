@@ -9,7 +9,7 @@ class Video_model extends CI_Model
     }
     function fetchVideoDetailComments($videoId)
     {
-        $query = $this->db->query("select comments, user, createddatetime from videoComments where videoId = {$videoId}");
+        $query = $this->db->query("select comments, user, createddatetime from videoComments where videoId = {$videoId} order by createddatetime desc");
         return $query->result();
     }
 
