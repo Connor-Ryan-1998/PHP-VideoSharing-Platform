@@ -5,7 +5,7 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
-                <h1>Video</h1>
+                <h1 class="text-center">Video</h1>
                 <div class=" container" id="videoDetail">
                 </div>
                 <?php echo form_open_multipart('upload/upload_comment'); ?>
