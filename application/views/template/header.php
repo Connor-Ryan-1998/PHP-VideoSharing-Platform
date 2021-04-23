@@ -52,6 +52,7 @@
             </ul>
         </div>
     </nav>
+    <br>
     <script type="text/javascript">
         var baseURL = "<?php echo base_url(); ?>";
     </script>
