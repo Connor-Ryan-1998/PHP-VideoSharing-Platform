@@ -17,7 +17,7 @@
         </div>
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox" name="remember"> Remember me</label>
-            <a href="<?php echo base_url(); ?>forgotPassword" class="float-right">Forgot Password?</a>
+            <a href="<?php echo base_url(); ?>forgotpassword" class="float-right">Forgot Password?</a>
         </div>
         <?php echo form_close(); ?>
     </div>
