@@ -20,14 +20,14 @@ class forgotpassword extends CI_Controller
         $this->load->helper('url');
         $this->load->view('template/header');
         $emailAddress = $this->input->post('emailAddress');
-        if ($this->user_model->forgotPassword($emailAddress)) {
-            $resetData = $this->user_model->forgotPasswordEmail($emailAddress);
-            $this->emailForgotPassword($resetData, $emailAddress);
-            $this->load->view('forgotpassword', $data);
-        } else {
-            $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Request failed. Email is incorrect! </div> ";
-            $this->load->view('forgotpassword', $data);
-        }
+        // if ($this->user_model->forgotPassword($emailAddress)) {
+        //     $resetData = $this->user_model->forgotPasswordEmail($emailAddress);
+        //     $this->emailForgotPassword($resetData, $emailAddress);
+        //     $this->load->view('forgotpassword', $data);
+        // } else {
+        //     $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Request failed. Email is incorrect! </div> ";
+        //     $this->load->view('forgotpassword', $data);
+        // }
         $this->load->view('template/footer');
     }
 
