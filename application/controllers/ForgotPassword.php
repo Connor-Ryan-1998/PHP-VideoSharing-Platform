@@ -15,34 +15,43 @@ class forgotpassword extends CI_Controller
     public function forgotPasswordFunction()
     {
         $this->load->model('user_model');
-        $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
+        $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Request success. Please check your email! </div> ";
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->view('template/header');
-        $username = $this->input->post('username');
-
-        $password = $this->input->post('password');
-        if (!$this->session->userdata('logged_in')) {
-            if ($this->user_model->login($username, $password)) {
-                $user_data = array(
-                    'username' => $username,
-                    'logged_in' => true
-                );
-                $this->session->set_userdata($user_data);
-                redirect('login');
-            } else {
-                $this->load->view('login', $data);
-            }
-        } else { {
-                redirect('login');
-            }
-            $this->load->view('template/footer');
+        $emailAddress = $this->input->post('emailAddress');
+        if ($this->user_model->forgotPassword($emailAddress)) {
+            $resetData = $this->user_model->forgotPasswordEmail($emailAddress);
+            $this->emailForgotPassword($resetData, $emailAddress);
+            $this->load->view('forgotpassword', $data);
+        } else {
+            $data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Request failed. Email is incorrect! </div> ";
+            $this->load->view('forgotpassword', $data);
         }
+        $this->load->view('template/footer');
     }
 
-    public function logout()
+    public function emailForgotPassword($resetData, $emailAddress)
     {
-        $this->session->unset_userdata('logged_in');
-        redirect('login');
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'mailhub.eait.uq.edu.au',
+            'smtp_port' => 25,
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1',
+            'wordwrap' => TRUE,
+            'mailtype' => 'html',
+            'starttls' => true,
+            'newline' => "\r\n"
+        );
+
+        $message = "Hello {$emailAddress}: Please enter the reset token in the reset page: {$resetData['resetPasswordToken']}. This token will be reset at {$resetData['resetPasswordTime']}";
+
+        $this->email->initialize($config);
+        $this->email->from(get_current_user() . '@student.uq.edu.au', get_current_user());
+        $this->email->to($emailAddress);
+        $this->email->subject('PHP-VideoSharing-Platform Password Reset');
+        $this->email->message($message);
+        $this->email->send();
     }
 }

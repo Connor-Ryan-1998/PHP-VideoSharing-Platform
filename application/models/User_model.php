@@ -46,4 +46,36 @@ class User_model extends CI_Model
             }
         }
     }
+    function forgotPassword($emailAddress)
+    {
+        $this->db->trans_start();
+        /// Time to expire 
+        $expireDatetime = new DateTime('NOW');
+        $expireDatetime->modify("+30 minutes");
+        // Validate
+        $this->db->set('resetPasswordToken', uniqid());
+        $this->db->set('resetPasswordTime', $expireDatetime);
+        $this->db->where('emailAddress', $emailAddress);
+        $this->db->update('users');
+        $this->db->trans_complete();
+        // error or update
+        if ($this->db->affected_rows() == '1') {
+            return TRUE;
+        } else {
+            // any trans error?
+            if ($this->db->trans_status() === FALSE) {
+                return false;
+            }
+            return true;
+        }
+    }
+    function forgotPasswordEmail($emailAddress)
+    {
+        // Validate
+        $this->db->select('resetPasswordToken');
+        $this->db->select('resetPasswordTime');
+        $this->db->where('emailAddress', $emailAddress);
+        $result = $this->db->get('users')->result_array();
+        return $result;
+    }
 }
