@@ -9,7 +9,7 @@ class forgotpassword extends CI_Controller
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->view('template/header');
-        // $this->load->view('forgotpassword');
+        $this->load->view('forgotpassword');
         $this->load->view('template/footer');
     }
     public function forgotPasswordFunction()
