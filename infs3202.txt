@@ -22,4 +22,6 @@ Milestone 3
 3. TODO: WebPush 4 %
 4. TODO: 4%
 5. TODO: Oauth 3%
-6. TODO Change PW 3%
+6. TODO Forgot PW 3%
+
+Total 20%
