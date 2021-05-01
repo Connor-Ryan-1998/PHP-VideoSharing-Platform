@@ -1,6 +1,6 @@
 <div class="container h-100">
     <div class="col-4 offset-4">
-        <?php echo form_open(base_url() . 'forgotpassword/forgotPasswordFunction'); ?>
+        <?php echo form_open(base_url() . 'forgotPassword/forgotPasswordFunction'); ?>
         <h2 class="text-center">Forgot Password?</h2>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="email Address" required="required" name="emailAddress">
