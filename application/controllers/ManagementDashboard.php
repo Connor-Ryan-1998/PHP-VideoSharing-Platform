@@ -12,7 +12,7 @@ class managementdashboard extends CI_Controller
 
         $data['user_list'] = $this->dashboard_model->fetch_users();
         $this->load->view('template/header');
-        // $this->load->view('managementdashboard', $data);
+        $this->load->view('dashboard', $data);
         $this->load->view('template/footer');
     }
     function fetch_data()
