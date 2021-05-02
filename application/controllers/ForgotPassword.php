@@ -33,6 +33,7 @@ class forgotpassword extends CI_Controller
 
     public function emailForgotPassword($resetData, $emailAddress)
     {
+        $this->load->helper('url');
         $config = array(
             'protocol' => 'smtp',
             'smtp_host' => 'mailhub.eait.uq.edu.au',
