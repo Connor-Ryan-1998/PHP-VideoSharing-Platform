@@ -12,10 +12,10 @@ class Dashboard_model extends CI_Model
         return $this->db->get();
     }
 
-    function fetch_chart_data($year)
+    function fetch_chart_data($user)
     {
-        $this->db->where('year', $year);
-        $this->db->order_by('year', 'ASC');
-        return $this->db->get('chart_data');
+        $this->db->where('username', $user);
+        $this->db->order_by('username', 'ASC');
+        return $this->db->get('userFiles');
     }
 }

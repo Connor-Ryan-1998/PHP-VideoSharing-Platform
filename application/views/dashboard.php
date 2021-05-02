@@ -1,16 +1,16 @@
 <div class="container">
     <br />
-    <h3>Dynamic Column Chart in Codeigniter using Ajax</h3>
+    <h3>Management Dashboard: Data Visualisation</h3>
     <br />
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-9">
-                    <h3 class="panel-title">Month Wise Profit Data</h3>
+                    <h3 class="panel-title">User Uploads</h3>
                 </div>
                 <div class="col-md-3">
                     <select name="users" id="users" class="form-control">
-                        <option value="">Select Year</option>
+                        <option value="">Select User</option>
                         <?php
                         foreach ($user_list->result_array() as $row) {
                             echo '<option value="' . $row["username"] . '">' . $row["username"] . '</option>';
@@ -26,7 +26,7 @@
         </div>
     </div>
 </div>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     google.charts.load('current', {
         packages: ['corechart', 'bar']
     });
@@ -35,7 +35,7 @@
     function load_monthwise_data(year, title) {
         var temp_title = title + ' ' + year;
         $.ajax({
-            url: "<?php echo base_url(); ?>managementdashboard/fetch_data",
+            url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
             data: {
                 year: year
@@ -50,8 +50,8 @@
     function drawMonthwiseChart(chart_data, chart_main_title) {
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Month');
-        data.addColumn('number', 'Profit');
+        data.addColumn('string', 'CreatedDateTime');
+        data.addColumn('string', 'filename');
 
         $.each(jsonData, function(i, jsonData) {
             var month = jsonData.month;
@@ -64,10 +64,10 @@
         var options = {
             title: chart_main_title,
             hAxis: {
-                title: "Months"
+                title: "CreatedDateTime"
             },
             vAxis: {
-                title: 'Profit'
+                title: 'filename'
             },
             chartArea: {
                 width: '80%',
@@ -83,11 +83,11 @@
 
 <script>
     $(document).ready(function() {
-        $('#year').change(function() {
+        $('#users').change(function() {
             var year = $(this).val();
             if (year != '') {
-                load_monthwise_data(year, 'Month Wise Profit Data For');
+                load_monthwise_data(year, 'User Uploaded files by date: ');
             }
         });
     });
-</script> -->
+</script>
