@@ -54,7 +54,7 @@ class User_model extends CI_Model
         $expireDatetime->modify("+30 minutes");
         // Validate
         $this->db->set('resetPasswordToken', uniqid());
-        $this->db->set('resetPasswordTime', $expireDatetime);
+        $this->db->set('resetPasswordTime', $expireDatetime->format('Y-m-d H:i:s'));
         $this->db->where('emailAddress', $emailAddress);
         $this->db->update('users');
         $this->db->trans_complete();
