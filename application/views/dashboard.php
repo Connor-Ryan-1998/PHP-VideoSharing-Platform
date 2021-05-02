@@ -26,6 +26,7 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     google.charts.load('current', {
         packages: ['corechart', 'bar']
@@ -34,6 +35,7 @@
 
     function load_monthwise_data(year, title) {
         var temp_title = title + ' ' + year;
+        console.log(temp_title);
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
@@ -84,9 +86,9 @@
 <script>
     $(document).ready(function() {
         $('#users').change(function() {
-            var year = $(this).val();
-            if (year != '') {
-                load_monthwise_data(year, 'User Uploaded files by date: ');
+            var user = $(this).val();
+            if (user != '') {
+                load_monthwise_data(user, 'User Uploaded files by date: ');
             }
         });
     });
