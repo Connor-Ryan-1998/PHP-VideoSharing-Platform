@@ -44,10 +44,12 @@ class forgotpassword extends CI_Controller
             'starttls' => true,
             'newline' => "\r\n"
         );
-        echo "<script>console.log('Debug Objects: " . array_keys($resetData) . "' );</script>";
-        echo "<script>console.log('Debug Objects: " . array_values($resetData) . "' );</script>";
-        $resetToken = $resetData['resetPasswordToken'];
-        $resetTime =  $resetData['resetPasswordTime'];
+
+
+        foreach ($resetData as $row) {
+            $resetToken = $row['resetPasswordToken'];
+            $resetTime =  $row['resetPasswordTime'];
+        }
 
         $message = "Hello {$emailAddress}: Please enter the reset token in the reset page: {$resetToken}. This token will be reset at {$resetTime}";
 
