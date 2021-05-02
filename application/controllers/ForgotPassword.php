@@ -44,6 +44,7 @@ class forgotpassword extends CI_Controller
             'starttls' => true,
             'newline' => "\r\n"
         );
+        echo "<script>console.log('Debug Objects: " . $resetData . "' );</script>";
 
         $resetToken = $resetData['resetPasswordToken'];
         $resetTime =  $resetData['resetPasswordTime'];
