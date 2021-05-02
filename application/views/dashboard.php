@@ -35,7 +35,6 @@
 
     function load_monthwise_data(year, title) {
         var temp_title = title + ' ' + year;
-        console.log(temp_title);
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
@@ -85,6 +84,7 @@
 
 <script>
     $(document).ready(function() {
+        console.log('foo');
         $('#users').change(function() {
             var user = $(this).val();
             if (user != '') {
