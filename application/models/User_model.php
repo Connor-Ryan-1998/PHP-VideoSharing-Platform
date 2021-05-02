@@ -88,7 +88,7 @@ class User_model extends CI_Model
         $this->db->set('password', $password);
         // $this->db->where('resetPasswordTime >=', $currentTimeChecker->format('Y-m-d H:i:s'));
         // $this->db->where('resetPasswordToken', $resetToken);
-        $this->db->where('emailAddress', $emailAddress);
+        // $this->db->where('emailAddress', $emailAddress);
         $this->db->update('users');
         $this->db->trans_complete();
         // error or update
