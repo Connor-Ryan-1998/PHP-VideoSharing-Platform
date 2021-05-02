@@ -78,4 +78,28 @@ class User_model extends CI_Model
         $result = $this->db->get('users')->result_array();
         return $result;
     }
+    function resetPassword($emailAddress, $resetToken, $newPassword)
+    {
+        $password = password_hash($newPassword, PASSWORD_DEFAULT);
+        $currentTimeChecker = new DateTime('NOW');
+        $this->db->trans_start();
+        /// Time to expire 
+        // Validate
+        $this->db->set('password', $password);
+        $this->db->where('resetPasswordTime >=', $currentTimeChecker->format('Y-m-d H:i:s'));
+        $this->db->where('resetPasswordToken', $resetToken);
+        $this->db->where('emailAddress', $emailAddress);
+        $this->db->update('users');
+        $this->db->trans_complete();
+        // error or update
+        if ($this->db->affected_rows() == '1') {
+            return TRUE;
+        } else {
+            // any trans error?
+            if ($this->db->trans_status() === FALSE) {
+                return false;
+            }
+            return true;
+        }
+    }
 }

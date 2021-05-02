@@ -1,12 +1,15 @@
 <div class="container h-100">
     <div class="col-4 offset-4">
-        <?php echo form_open(base_url() . 'resetpassword/resetPasswordVerify'); ?>
+        <?php echo form_open(base_url() . 'resetPassword/resetPasswordVerify'); ?>
         <h2 class="text-center">Reset Password</h2>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="email Address" required="required" name="emailAddress">
         </div>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Reset Token" required="required" name="resetToken">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="New Password" required="required" name="newPassword">
         </div>
         <div class="form-group">
             <?php echo $error; ?>
