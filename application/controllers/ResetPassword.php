@@ -13,7 +13,7 @@ class resetpassword extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function resetPassword()
+    public function resetPasswordVerify()
     {
     }
 }
