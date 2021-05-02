@@ -50,8 +50,10 @@ class forgotpassword extends CI_Controller
             $resetToken = $row['resetPasswordToken'];
             $resetTime =  $row['resetPasswordTime'];
         }
+        $resetPasswordUrl = base_url() + "resetpassword";
 
-        $message = "Hello {$emailAddress}: Please enter the reset token in the reset page: {$resetToken}. This token will be reset at {$resetTime} UTC";
+        $message = "Hello {$emailAddress}: Please enter the reset token in the reset page: {$resetToken}. This token will be reset at {$resetTime} UTC \n 
+        Please Visit to reset: {$resetPasswordUrl}";
 
         $this->email->initialize($config);
         $this->email->from(get_current_user() . '@student.uq.edu.au', get_current_user());
