@@ -94,12 +94,8 @@ class User_model extends CI_Model
         // error or update
         if ($this->db->affected_rows() == '1') {
             return TRUE;
-        } else {
-            // any trans error?
-            if ($this->db->trans_status() === FALSE) {
-                return false;
-            }
-            return true;
+        } else
+            return FALSE;
         }
     }
 }
