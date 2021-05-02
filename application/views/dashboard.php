@@ -26,7 +26,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     google.charts.load('current', {
         packages: ['corechart', 'bar']
     });
@@ -90,4 +90,4 @@
             }
         });
     });
-</script>
+</script> -->
