@@ -52,24 +52,24 @@
         console.log('foobar' + chart_data);
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'CreatedDateTime');
-        data.addColumn('string', 'filename');
+        data.addColumn('string', 'dateCreated');
+        data.addColumn('number', 'FileUploadedCount');
 
         $.each(jsonData, function(i, jsonData) {
-            var month = jsonData.month;
-            var profit = parseFloat($.trim(jsonData.profit));
+            var dateCreated = jsonData.dateCreated;
+            var FileUploadedCount = parseFloat($.trim(jsonData.FileUploadedCount));
             data.addRows([
-                [month, profit]
+                [dateCreated, FileUploadedCount]
             ]);
         });
 
         var options = {
             title: chart_main_title,
             hAxis: {
-                title: "CreatedDateTime"
+                title: "dateCreated"
             },
             vAxis: {
-                title: 'filename'
+                title: 'FileUploadedCount'
             },
             chartArea: {
                 width: '80%',
