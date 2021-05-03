@@ -49,14 +49,14 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
-        console.log('foobar' + chart_data);
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'dateCreated');
+        data.addColumn('date', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
-        console.log(data);
+        // console.log(data);
 
+        data.addRows([jsonData]);
         // $.each(jsonData, function(i, jsonData) {
         //     var dateCreated = jsonData.dateCreated;
         //     var FileUploadedCount = jsonData.FileUploadedCount;
