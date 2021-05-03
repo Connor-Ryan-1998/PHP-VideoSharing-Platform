@@ -27,7 +27,7 @@ class managementdashboard extends CI_Controller
         //             'filename' => $row["filename"]
         //         );
         //     }
-            // echo json_encode($output);
-        }
+        //     // echo json_encode($output);
+        // }
     }
 }
