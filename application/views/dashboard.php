@@ -43,7 +43,6 @@
                 drawMonthwiseChart(data, temp_title);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown, data) {
-                console.log(data);
                 alert("Status: " + textStatus);
                 alert("Error: " + errorThrown);
             }
