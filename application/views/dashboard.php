@@ -55,16 +55,16 @@
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
-        console.log('foobar2' + chart_data);
+        console.log(data);
 
-        $.each(jsonData, function(i, jsonData) {
-            var dateCreated = jsonData.dateCreated;
-            var FileUploadedCount = jsonData.FileUploadedCount;
-            data.addRows([
-                [dateCreated, FileUploadedCount]
-            ]);
-        });
-        console.log('foobar3' + chart_data);
+        // $.each(jsonData, function(i, jsonData) {
+        //     var dateCreated = jsonData.dateCreated;
+        //     var FileUploadedCount = jsonData.FileUploadedCount;
+        //     data.addRows([
+        //         [dateCreated, FileUploadedCount]
+        //     ]);
+        // });
+        // console.log('foobar3' + chart_data);
         var options = {
             title: chart_main_title,
             hAxis: {
