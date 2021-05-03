@@ -24,8 +24,8 @@ class managementdashboard extends CI_Controller
         $chart_data = $this->dashboard_model->fetch_chart_data($this->input->post('users'));
         foreach ($chart_data->result_array() as $row) {
             $output[] = array(
-                'CreatedDateTime'  => $row["createddatetime"],
-                'filename' => $row["filename"]
+                'dateCreated'  => $row["dateCreated"],
+                'FileUploadedCount' => $row["FileUploadedCount"]
             );
         }
         echo json_encode($output);

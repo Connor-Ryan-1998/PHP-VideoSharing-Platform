@@ -15,7 +15,7 @@ class Dashboard_model extends CI_Model
     function fetch_chart_data($user)
     {
         // $this->db->where('username', $user);
-        $this->db->select('COUNT(*)');
+        $this->db->select('COUNT(*) AS FileUploadedCount');
         $this->db->select('CAST(CreatedDateTime AS DATE) AS dateCreated');
         $this->db->group_by('dateCreated');
         return $this->db->get('userFiles');
