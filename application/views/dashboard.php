@@ -38,9 +38,9 @@
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
-            // data: {
-            //     users: users
-            // },
+            data: {
+                users: users
+            },
             dataType: "JSON",
             success: function(data) {
                 drawMonthwiseChart(data, temp_title);
