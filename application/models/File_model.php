@@ -65,7 +65,8 @@ class File_model extends CI_Model
     {
         $username = $this->session->userdata('username');
         ///Takes Videos you have interected with from a profile and reccomends others from the same creator
-        $query = $this->db->query("CALL GetCustomers({$username})");
+
+        $query = $this->db->query("CALL GetCustomers(CONVERT({$username}, CHAR)");
         echo "<script>console.log('Debug Objects: " . $query . "' );</script>";
         return $query->result();
     }
