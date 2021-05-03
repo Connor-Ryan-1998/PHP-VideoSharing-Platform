@@ -17,6 +17,7 @@ class managementdashboard extends CI_Controller
     }
     function fetch_data()
     {
+        echo "<script>console.log('Debug Objects: " . "foo" . "' );</script>";
         $this->load->model('dashboard_model');
         if ($this->input->post('users')) {
             $chart_data = $this->dashboard_model->fetch_chart_data($this->input->post('users'));
@@ -26,7 +27,6 @@ class managementdashboard extends CI_Controller
                     'filename' => $row["filename"]
                 );
             }
-            echo "<script>console.log('Debug Objects: " . json_encode($output) . "' );</script>";
             echo json_encode($output);
         }
     }
