@@ -50,11 +50,13 @@
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
         var jsonData = chart_data;
-        var data = new google.visualization.DataTable();
+        var array = JSON.parse(jsonData);
+        // var data = new google.visualization.DataTable();
+        var data = google.visualization.arrayToDataTable(array);
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
-        data.addRow(["2021-04-23", 1]);
+        // data.addRow(["2021-04-23", 1]);
 
         // $.each(jsonData, function(i, jsonData) {
         //     var dateCreated = jsonData.dateCreated;
