@@ -39,7 +39,6 @@
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
             success: function(data) {
-                console.log("selected value" + data);
                 drawMonthwiseChart(data, temp_title);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown, data) {
@@ -50,6 +49,7 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
+        console.log('foobar' + chart_data);
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'CreatedDateTime');
