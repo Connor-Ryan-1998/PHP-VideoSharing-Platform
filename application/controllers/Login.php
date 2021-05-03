@@ -3,16 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class login extends CI_Controller
 {
-	public function __construct()
-	{
-		parent::__construct();
-
-		// Load facebook library and pass associative array which contains appId and secret key
-		$this->load->library('facebook', array('appId' => '1016666278866626', 'secret' => 'b411a69a308c376887dafc651ff4a016'));
-
-		// Get user's login information
-		$this->user = $this->facebook->getUser();
-	}
 	public function index()
 	{
 		$data['error'] = "";
