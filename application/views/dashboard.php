@@ -63,20 +63,14 @@
             data.addRow([dateCreated, parseInt(FileUploadedCount)]);
         }
 
-        // $.each(jsonData, function(i, jsonData) {
-        //     var dateCreated = jsonData.dateCreated;
-        //     var FileUploadedCount = parseFloat($.trim(jsonData.FileUploadedCount));
-        //     data.addRows([
-        //         [dateCreated, FileUploadedCount]
-        //     ]);
-        // });
+
         var options = {
             title: chart_main_title,
             hAxis: {
-                title: "dateCreated"
+                title: "Date Created"
             },
             vAxis: {
-                title: 'FileUploadedCount'
+                title: 'File Uploaded Count'
             },
             chartArea: {
                 width: '80%',
@@ -84,7 +78,9 @@
             }
         }
 
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
+        // var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
+        var chart = new google.visualization.LineChart(document.getElementById('chart_area'));
+        // var chart = new google.visualization.Table(document.getElementById('chart_area'));
 
         chart.draw(data, options);
     }
