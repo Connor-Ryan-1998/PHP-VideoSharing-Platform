@@ -49,6 +49,7 @@ class ajax extends CI_Controller
     {
         $this->load->model('file_model');
         $data = $this->file_model->fetchReccomendedForUser();
+        echo "<script>console.log('Debug Objects: " . $data . "' );</script>";
         echo json_encode($data);
     }
 }
