@@ -51,10 +51,10 @@
     function drawMonthwiseChart(chart_data, chart_main_title) {
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
-        data.addColumn('date', 'dateCreated');
+        data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
-        data.addRow([Date.parse("2021-04-23"), "1"]);
+        data.addRow(["2021-04-23", "1"]);
 
         // $.each(jsonData, function(i, jsonData) {
         //     var dateCreated = jsonData.dateCreated;
