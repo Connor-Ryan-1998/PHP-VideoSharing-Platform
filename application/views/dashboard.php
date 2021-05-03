@@ -54,13 +54,13 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
-        console.log(typeof jsonData);
+        console.log(jsonData);
         for (var i = 0; i < jsonData.length; i++) {
             dateCreated = jsonData[i].dateCreated;
             FileUploadedCount = jsonData[i].FileUploadedCount;
             console.log(FileUploadedCount);
             console.log(dateCreated);
-            data.addRow([dateCreated, FileUploadedCount]);
+            data.addRow([dateCreated, parseInt(FileUploadedCount)]);
         }
 
         // $.each(jsonData, function(i, jsonData) {
