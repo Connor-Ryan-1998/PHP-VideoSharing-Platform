@@ -67,7 +67,7 @@
         //         [dateCreated, FileUploadedCount]
         //     ]);
         // });
-        console.log('foobar3' + chart_data);
+        console.log(data);
         var options = {
             title: chart_main_title,
             hAxis: {
