@@ -36,8 +36,11 @@
     function load_monthwise_data(user, title) {
         var temp_title = title + ' ' + user;
         $.ajax({
-            url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
+            url: "<?php echo base_url(); ?>managementDashboard/fetch_data/",
             method: "POST",
+            data: {
+                users: users
+            },
             dataType: "JSON",
             success: function(data) {
                 drawMonthwiseChart(data, temp_title);
@@ -78,9 +81,8 @@
             }
         }
 
-        // var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
-        var chart = new google.visualization.LineChart(document.getElementById('chart_area'));
-        // var chart = new google.visualization.Table(document.getElementById('chart_area'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
+
 
         chart.draw(data, options);
     }
