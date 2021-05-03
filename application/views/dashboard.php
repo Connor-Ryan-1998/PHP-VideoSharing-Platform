@@ -38,12 +38,12 @@
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
-            dataType: "JSON",
             success: function(data) {
                 console.log(data);
                 drawMonthwiseChart(data, temp_title);
             },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
+            error: function(XMLHttpRequest, textStatus, errorThrown, data) {
+                console.log(data);
                 alert("Status: " + textStatus);
                 alert("Error: " + errorThrown);
             }
