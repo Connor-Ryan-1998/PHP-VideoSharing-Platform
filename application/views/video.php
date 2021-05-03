@@ -3,6 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
+                <h2>Recommended Videos</h2>
+                <div class="container" id="recommendedVideoList">
+                    <!-- Content here -->
+                </div>
             </div>
             <div class="col-sm bg-light">
                 <h2>Recently Uploaded Videos</h2>

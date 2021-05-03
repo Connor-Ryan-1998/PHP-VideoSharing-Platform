@@ -60,4 +60,11 @@ class File_model extends CI_Model
         $query = $this->db->query("select id, filename, createddatetime, username from userFiles where filename like '%mp4%' order by createddatetime desc");
         return $query->result();
     }
+
+    function fetchReccomendedForUser()
+    {
+        echo "<script> console.log(" + $_SESSION["username"] + ") <\script>";
+        $query = $this->db->query("select id, filename, createddatetime, username from userFiles where filename like '%mp4%' order by createddatetime desc");
+        return $query->result();
+    }
 }

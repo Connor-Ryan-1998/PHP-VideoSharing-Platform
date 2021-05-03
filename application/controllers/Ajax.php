@@ -45,4 +45,10 @@ class ajax extends CI_Controller
         $data = $this->video_model->fetchVideoDetailComments($this->input->cookie('videoDetailId', false));
         echo json_encode($data);
     }
+    public function fetchReccomended()
+    {
+        $this->load->model('file_model');
+        $data = $this->file_model->fetchReccomendedForUser();
+        echo json_encode($data);
+    }
 }
