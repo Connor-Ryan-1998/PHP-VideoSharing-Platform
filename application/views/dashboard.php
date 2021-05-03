@@ -50,7 +50,6 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
-        console.log(chart_data);
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'CreatedDateTime');

@@ -17,6 +17,9 @@ class managementdashboard extends CI_Controller
     }
     function fetch_data()
     {
+        $this->load->helper('form');
+        $this->load->helper('url');
+
         $this->load->model('dashboard_model');
         return $this->input->post('users');
         // if ($this->input->post('users')) {
