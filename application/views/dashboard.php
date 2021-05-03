@@ -39,9 +39,6 @@
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
-            data: {
-                user: user
-            },
             dataType: "JSON",
             success: function(data) {
                 drawMonthwiseChart(data, temp_title);
@@ -50,7 +47,7 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
-        console.log('foobar')
+        console.log(chart_data);
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'CreatedDateTime');
