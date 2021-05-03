@@ -8,10 +8,10 @@ Features done Milestone 2
 2.Search box autocompletion (Search in top right) 2%
 3.User profile updating (e.g., email, phone number) (Profile page) 2%
 4. Basic file uploading: (e.g., profile image, food pictures, thumbnails)2%
-5.Web Security password encryption(storing using php password hash and verifying on login) 2%
+5. Web Security password encryption(storing using php password hash and verifying on login) 2%
 6. Email Verification 3%
 7. Social Media Integration, share to facebook 2%
-8.reCaptcha on login 2%
+8. reCaptcha on login 2%
 9. Comments + anonymous comments 3%
 
 Total = 20%

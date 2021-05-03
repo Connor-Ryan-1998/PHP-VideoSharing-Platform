@@ -35,6 +35,7 @@
 
     function load_monthwise_data(year, title) {
         var temp_title = title + ' ' + year;
+        console.log('fooobar')
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
