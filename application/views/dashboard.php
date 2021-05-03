@@ -52,9 +52,9 @@
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'dateCreated');
-        data.addColumn('int', 'FileUploadedCount');
+        data.addColumn('number', 'FileUploadedCount');
 
-        data.addRow(["2021-04-23", "1"]);
+        data.addRow(["2021-04-23", 1]);
 
         // $.each(jsonData, function(i, jsonData) {
         //     var dateCreated = jsonData.dateCreated;
