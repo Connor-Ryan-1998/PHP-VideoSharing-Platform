@@ -57,14 +57,15 @@ class File_model extends CI_Model
 
     function fetchRecentlyUploaded()
     {
-        $query = $this->db->query("select id, filename, createddatetime, username from userFiles where filename like '%mp4%' order by createddatetime desc");
+        $query = $this->db->query("select id, filename, createddatetime, username from userFiles order by createddatetime desc");
         return $query->result();
     }
 
     function fetchReccomendedForUser()
     {
-        echo "<script> console.log(" + $_SESSION["username"] + ") <\script>";
-        $query = $this->db->query("select id, filename, createddatetime, username from userFiles where filename like '%mp4%' order by createddatetime desc");
+        $username = $this->session->userdata('username');
+        ///Takes Videos you have interected with from a profile and reccomends others from the same creator
+        $query = $this->db->query("SELECT TOP 10 id, filename, createddatetime, username from userFiles inner join videocomments");
         return $query->result();
     }
 }

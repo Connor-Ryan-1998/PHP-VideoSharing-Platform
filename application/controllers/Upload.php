@@ -7,7 +7,7 @@ class Upload extends CI_Controller
         $this->load->model('file_model');
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'mp4';
-        $config['max_size'] = 10000;
+        $config['max_size'] = 1000000;
         $config['max_width'] = 1024;
         $config['max_height'] = 768;
         $this->load->library('upload', $config);
