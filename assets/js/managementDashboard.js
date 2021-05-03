@@ -1,44 +1,20 @@
-<div class="container">
-    <br />
-    <h3>Management Dashboard: Data Visualisation</h3>
-    <br />
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="row">
-                <div class="col-md-9">
-                    <h3 class="panel-title">User Uploads</h3>
-                </div>
-                <div class="col-md-3">
-                    <select name="users" id="users" class="form-control">
-                        <option value="">Select User</option>
-                        <?php
-                        foreach ($user_list->result_array() as $row) {
-                            echo '<option value="' . $row["username"] . '">' . $row["username"] . '</option>';
-                        }
-                        ?>
-
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="panel-body">
-            <div id="chart_area" style="width: 1000px; height: 620px;"></div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/managementDashboard.js"></script>
-<!-- 
-<script type="text/javascript">
+$(document).ready(function() {
     google.charts.load('current', {
         packages: ['corechart', 'bar']
     });
     google.charts.setOnLoadCallback();
 
+    $('#users').change(function() {
+        var user = $(this).val();
+        if (user != '') {
+            load_monthwise_data(user, 'User Uploaded files by date: ');
+        }
+    });
+
     function load_monthwise_data(user, title) {
         var temp_title = title + ' ' + user;
         $.ajax({
-            url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
+            url: baseURL + "managementDashboard/fetch_data",
             method: "POST",
             data: {
                 'user': user
@@ -88,15 +64,6 @@
 
         chart.draw(data, options);
     }
-</script>
 
-<script>
-    $(document).ready(function() {
-        $('#users').change(function() {
-            var user = $(this).val();
-            if (user != '') {
-                load_monthwise_data(user, 'User Uploaded files by date: ');
-            }
-        });
-    });
-</script> -->
+
+});
