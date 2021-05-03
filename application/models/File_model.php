@@ -64,9 +64,8 @@ class File_model extends CI_Model
     function fetchReccomendedForUser()
     {
         $username = $this->session->userdata('username');
-        ///Takes Videos you have interected with from a profile and reccomends others from the same creator
-
-        $query = $this->db->query('CALL GetCustomers(?)', $username);
+        ///Takes Videos you have interected with from a profile and reccomends others from the same creator that you havent interacted with
+        $query = $this->db->query('CALL GetRelatedReccomendedAlgorithm(?)', $username);
         return $query->result();
     }
 }
