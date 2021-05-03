@@ -64,6 +64,7 @@ class File_model extends CI_Model
     function fetchReccomendedForUser()
     {
         $username = $this->session->userdata('username');
+        echo "<script>console.log('Debug Objects: " . $username . "' );</script>";
         ///Takes Videos you have interected with from a profile and reccomends others from the same creator
         $query = $this->db->query("CREATE TEMPORARY TABLE interactedCreators(
             id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
