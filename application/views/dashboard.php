@@ -54,7 +54,7 @@
         data.addColumn('date', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
-        data.addRow(["2021-04-23", "1"]);
+        data.addRow([Date.parse("2021-04-23"), "1"]);
 
         // $.each(jsonData, function(i, jsonData) {
         //     var dateCreated = jsonData.dateCreated;
