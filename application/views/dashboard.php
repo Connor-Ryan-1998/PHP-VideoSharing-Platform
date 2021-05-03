@@ -35,12 +35,12 @@
 
     function load_monthwise_data(user, title) {
         var temp_title = title + ' ' + user;
-        console.log(user)
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
-            method: "GET",
+            method: "POST",
             dataType: "JSON",
             success: function(data) {
+                console.log(data);
                 drawMonthwiseChart(data, temp_title);
             }
         })
