@@ -65,7 +65,18 @@ class File_model extends CI_Model
     {
         $username = $this->session->userdata('username');
         ///Takes Videos you have interected with from a profile and reccomends others from the same creator
-        $query = $this->db->query("SELECT TOP 10 id, filename, createddatetime, username from userFiles inner join videocomments");
+        $query = $this->db->query("CREATE TEMPORARY TABLE interactedCreators(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            creatorUsername varchar(150)
+         );
+         
+         INSERT INTO interactedCreators(creatorUsername)
+         SELECT uf.username FROM userFiles uf LEFT join videoComments vC on uf.id = vC.videoId
+         WHERE vC.user = {$username};
+         
+         SELECT uF.id, uF.filename, uF.createddatetime, uF.username FROM userFiles uF inner join interactedCreators iC ON uF.username = iC.creatorUsername
+         WHERE uF.id NOT IN (SELECT vC.videoId FROM videoComments vC WHERE vC.user = {$username})
+         ");
         return $query->result();
     }
 }
