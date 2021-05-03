@@ -52,7 +52,7 @@
         var jsonData = chart_data;
         var array = JSON.parse(jsonData);
         // var data = new google.visualization.DataTable();
-        var data = google.visualization.arrayToDataTable(array);
+        var data = google.visualization.arrayToDataTable(array, true);
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
 
