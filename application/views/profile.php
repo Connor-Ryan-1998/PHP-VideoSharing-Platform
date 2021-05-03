@@ -54,7 +54,7 @@
             </div>
             <div class="col-sm">
                 <h2 class="text-center">Additional Data</h2>
-                <a href=href="<?php echo base_url(); ?>managementDashboard" class="btn btn-dark btn-info" role="button">Management Dashboard</a>
+                <a href="<?php echo base_url(); ?>managementDashboard" class="btn btn-dark btn-info" role="button">Management Dashboard</a>
             </div>
         </div>
     </div>
