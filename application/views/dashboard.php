@@ -21,6 +21,7 @@
                     <select name="chartType" id="chartType" class="form-control">
                         <option value="">Select Chart Type</option>
                         <option value="Column">Column</option>
+                        <option value="Pie">Pie</option>
                     </select>
                 </div>
             </div>

@@ -12,6 +12,15 @@ $(document).ready(function() {
         }
     });
 
+    $('#chartType').change(function() {
+        var user = $('#users').val();
+        var chart_type = $(this).val();
+        if (user != '') {
+            load_userUpload_data(user, 'User Uploaded files by date: ', chart_type);
+        }
+    });
+
+
     function load_userUpload_data(user, title, chart_type) {
         var temp_title = title + ' ' + user;
         $.ajax({
@@ -45,23 +54,32 @@ $(document).ready(function() {
             data.addRow([dateCreated, parseInt(FileUploadedCount)]);
         }
 
-
-        var options = {
-            title: chart_main_title,
-            hAxis: {
-                title: "Date Created"
-            },
-            vAxis: {
-                title: 'File Uploaded Count'
-            },
-            chartArea: {
-                width: '80%',
-                height: '85%'
-            }
-        }
         if (chart_type == "Column")
         {
+            var options = {
+                title: chart_main_title,
+                hAxis: {
+                    title: "Date Created"
+                },
+                vAxis: {
+                    title: 'File Uploaded Count'
+                },
+                chartArea: {
+                    width: '80%',
+                    height: '85%'
+                }
+            }
+
             var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
+            chart.draw(data, options);
+        }
+        else if (chart_type == "Pie")
+        {
+            var options = {
+                title: chart_main_title
+              };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_area'));
             chart.draw(data, options);
         }
     }
