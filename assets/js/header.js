@@ -3,14 +3,7 @@ $(document).ready(function() {
     Notification.requestPermission().then(function(permission) { console.log('permiss', permission)});
     if (window.Notification && Notification.permission === "granted")
     {
-        var i = 0;
-        var interval = window.setInterval(function () {
-            // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
-            if (i++ == 9) {
-              window.clearInterval(interval);
-            }
-          }, 200);   
+        var n = new Notification("Hi! ", {tag: 'soManyNotification'});
     }
     $("#search_text").autocomplete({
         source: function(request, response) {
