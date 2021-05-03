@@ -49,7 +49,7 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
-        var jsonData = chart_data[0]; ///array of json?
+        var jsonData = chart_data; ///array of json?
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
@@ -69,7 +69,6 @@
         //         [dateCreated, FileUploadedCount]
         //     ]);
         // });
-        console.log(data);
         var options = {
             title: chart_main_title,
             hAxis: {
