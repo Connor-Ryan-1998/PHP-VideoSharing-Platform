@@ -36,7 +36,7 @@
     function load_monthwise_data(user, title) {
         var temp_title = title + ' ' + user;
         $.ajax({
-            url: "<?php echo base_url(); ?>managementDashboard/fetch_data/",
+            url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
             data: {
                 users: users
