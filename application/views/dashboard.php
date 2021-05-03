@@ -33,14 +33,14 @@
     });
     google.charts.setOnLoadCallback();
 
-    function load_monthwise_data(year, title) {
-        var temp_title = title + ' ' + year;
-        console.log('fooobar')
+    function load_monthwise_data(user, title) {
+        var temp_title = title + ' ' + user;
+        console.log(user)
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
             data: {
-                year: year
+                user: user
             },
             dataType: "JSON",
             success: function(data) {
@@ -50,6 +50,7 @@
     }
 
     function drawMonthwiseChart(chart_data, chart_main_title) {
+        console.log('foobar')
         var jsonData = chart_data;
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'CreatedDateTime');
@@ -85,7 +86,6 @@
 
 <script>
     $(document).ready(function() {
-        console.log('foo');
         $('#users').change(function() {
             var user = $(this).val();
             if (user != '') {
