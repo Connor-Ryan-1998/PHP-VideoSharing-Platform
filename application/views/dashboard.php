@@ -57,7 +57,7 @@
         for (var i = 0; i < jsonData.length; i++) {
             dateCreated = jsonData[i].dateCreated;
             FileUploadedCount = jsonData[i].FileUploadedCount;
-            data.addRow([mes, total]);
+            data.addRow([dateCreated, FileUploadedCount]);
         }
 
         // $.each(jsonData, function(i, jsonData) {
