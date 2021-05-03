@@ -38,6 +38,7 @@
         $.ajax({
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
+            dataType: "JSON",
             success: function(data) {
                 drawMonthwiseChart(data, temp_title);
             },
