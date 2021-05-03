@@ -20,8 +20,6 @@
                 <?php echo form_close(); ?>
             </div>
             <div class="col-sm">
-            </div>
-            <div class="col-sm">
                 <?php echo form_open(base_url() . 'profile/updatePersonnelData'); ?>
                 <h2 class="text-center">Personnel Data</h2>
                 <div class="form-group">
@@ -53,6 +51,10 @@
                     <button type="submit" class="btn btn-primary btn-block">Update Data</button>
                 </div>
                 <?php echo form_close(); ?>
+            </div>
+            <div class="col-sm">
+                <h2 class="text-center">Additional Data</h2>
+                <button type="button" class="btn btn-dark" href="<?php echo base_url(); ?>managementDashboard">Management Dashboard</button>
             </div>
         </div>
     </div>
