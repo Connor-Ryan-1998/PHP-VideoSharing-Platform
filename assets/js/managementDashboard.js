@@ -6,12 +6,13 @@ $(document).ready(function() {
 
     $('#users').change(function() {
         var user = $(this).val();
+        var chart_type = $('#chartType').val();
         if (user != '') {
-            load_monthwise_data(user, 'User Uploaded files by date: ');
+            load_userUpload_data(user, 'User Uploaded files by date: ', chart_type);
         }
     });
 
-    function load_monthwise_data(user, title) {
+    function load_userUpload_data(user, title, chart_type) {
         var temp_title = title + ' ' + user;
         $.ajax({
             url: baseURL + "managementDashboard/fetch_data",
@@ -21,7 +22,7 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                drawMonthwiseChart(data, temp_title);
+                drawUserUploadChart(data, temp_title, chart_type);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown, data) {
                 alert("Status: " + textStatus);
@@ -30,8 +31,8 @@ $(document).ready(function() {
         })
     }
 
-    function drawMonthwiseChart(chart_data, chart_main_title) {
-        var jsonData = chart_data; ///array of json?
+    function drawUserUploadChart(chart_data, chart_main_title, chart_type) {
+        var jsonData = chart_data; 
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
@@ -58,11 +59,11 @@ $(document).ready(function() {
                 height: '85%'
             }
         }
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
-
-
-        chart.draw(data, options);
+        if (chart_type == "Column")
+        {
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_area'));
+            chart.draw(data, options);
+        }
     }
 
 
