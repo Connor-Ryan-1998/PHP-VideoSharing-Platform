@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
     Notification.requestPermission().then(function(permission) { console.log('permiss', permission)});
-    if (window.Notification && Notification.permission === "granted")
+    if (Notification.permission === "granted")
     {
         console.log('foo');
-        var n = new Notification("Hi! ", {tag: 'soManyNotification'});
+        navigator.serviceWorker.getRegistration().then(function(reg) {
+            reg.showNotification('Hello world!');
+          });
     }
     $("#search_text").autocomplete({
         source: function(request, response) {
