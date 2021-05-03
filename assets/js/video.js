@@ -1,5 +1,8 @@
 $(document).ready(function() {
         load_data();
+        Notification.requestPermission().then(function(result) {
+            console.log(result);
+          });
 
         function load_data() {
             $.ajax({

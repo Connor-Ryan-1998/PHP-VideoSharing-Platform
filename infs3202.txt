@@ -18,7 +18,7 @@ Total = 20%
 
 Milestone 3
 1. Drag and drop files 2%
-2. TODO: Management Dashboard 4%
+2. Management Dashboard 4%
 3. TODO: WebPush 4 %
 4. TODO: 4%
 5. TODO: Oauth 3%
