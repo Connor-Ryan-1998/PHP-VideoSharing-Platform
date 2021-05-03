@@ -1,5 +1,11 @@
 $(document).ready(function() {
         load_data();
+        requestPermission();
+
+        function requestPermission(){
+            Notification.requestPermission().then(function(permission) { console.log('permiss', permission)});
+            console.log('permiss');
+        }
 
         function load_data() {
             $.ajax({
