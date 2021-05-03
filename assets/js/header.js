@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    Notification.requestPermission();
+    Notification.requestPermission().then(function(permission) { console.log('permiss', permission)});
+
     $("#search_text").autocomplete({
         source: function(request, response) {
             $.ajax({
