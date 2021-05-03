@@ -14,7 +14,7 @@ class Dashboard_model extends CI_Model
 
     function fetch_chart_data($user)
     {
-        $this->db->where('username', $user);
+        // $this->db->where('username', $user);
         $this->db->order_by('username', 'ASC');
         return $this->db->get('userFiles');
     }

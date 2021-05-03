@@ -21,16 +21,15 @@ class managementdashboard extends CI_Controller
         $this->load->helper('url');
 
         $this->load->model('dashboard_model');
-        return $this->input->post();
-        // if ($this->input->post('users')) {
-        //     $chart_data = $this->dashboard_model->fetch_chart_data($this->input->post('users'));
-        //     foreach ($chart_data->result_array() as $row) {
-        //         $output[] = array(
-        //             'CreatedDateTime'  => $row["createddatetime"],
-        //             'filename' => $row["filename"]
-        //         );
-        //     }
-        //     // echo json_encode($output);
-        // }
+        if ($this->input->post('users')) {
+            $chart_data = $this->dashboard_model->fetch_chart_data($this->input->post('users'));
+            foreach ($chart_data->result_array() as $row) {
+                $output[] = array(
+                    'CreatedDateTime'  => $row["createddatetime"],
+                    'filename' => $row["filename"]
+                );
+            }
+            echo json_encode($output);
+        }
     }
 }
