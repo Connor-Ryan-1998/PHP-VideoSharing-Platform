@@ -57,6 +57,8 @@
         for (var i = 0; i < jsonData.length; i++) {
             dateCreated = jsonData[i].dateCreated;
             FileUploadedCount = jsonData[i].FileUploadedCount;
+            console.log(FileUploadedCount);
+            console.log(dateCreated);
             data.addRow([dateCreated, FileUploadedCount]);
         }
 
