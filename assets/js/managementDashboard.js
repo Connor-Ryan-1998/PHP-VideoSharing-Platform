@@ -82,6 +82,30 @@ $(document).ready(function() {
             var chart = new google.visualization.PieChart(document.getElementById('chart_area'));
             chart.draw(data, options);
         }
+        else if (chart_type == "Bar")
+        {
+            var options = {
+                title: chart_main_title,
+                width: 600,
+                height: 400,
+                bar: {groupWidth: "95%"},
+                legend: { position: "none" },
+              };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_area'));
+            chart.draw(data, options);
+        }
+        else if (chart_type == "Line")
+        {
+            var options = {
+                title: chart_main_title,
+                curveType: 'function',
+                legend: { position: 'bottom' }
+              };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_area'));
+            chart.draw(data, options);
+        }
     }
 
 

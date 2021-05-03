@@ -22,6 +22,8 @@
                         <option value="">Select Chart Type</option>
                         <option value="Column">Column</option>
                         <option value="Pie">Pie</option>
+                        <option value="Bar">Bar</option>
+                        <option value="Line">Line</option>
                     </select>
                 </div>
             </div>
