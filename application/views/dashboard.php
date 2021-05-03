@@ -53,7 +53,7 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'dateCreated');
         data.addColumn('number', 'FileUploadedCount');
-        console.log(jsonData);
+        console.log(typeof jsonData);
         for (var i = 0; i < jsonData.length; i++) {
             dateCreated = jsonData[i].dateCreated;
             FileUploadedCount = jsonData[i].FileUploadedCount;
