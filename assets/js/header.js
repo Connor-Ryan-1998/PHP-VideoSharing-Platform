@@ -4,9 +4,7 @@ $(document).ready(function() {
     if (Notification.permission === "granted")
     {
         console.log('foo');
-        navigator.serviceWorker.getRegistration().then(function(reg) {
-            reg.showNotification('Hello world!');
-          });
+        var n = new Notification("Hi! ", {tag: 'soManyNotification'});
     }
     $("#search_text").autocomplete({
         source: function(request, response) {
