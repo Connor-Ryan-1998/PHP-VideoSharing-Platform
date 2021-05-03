@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    Notification.requestPermission();
     $("#search_text").autocomplete({
         source: function(request, response) {
             $.ajax({
