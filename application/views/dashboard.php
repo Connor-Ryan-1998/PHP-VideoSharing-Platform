@@ -39,7 +39,7 @@
             url: "<?php echo base_url(); ?>managementDashboard/fetch_data",
             method: "POST",
             success: function(data) {
-                console.log(data);
+                console.log("selected value" + data);
                 drawMonthwiseChart(data, temp_title);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown, data) {
