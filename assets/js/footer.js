@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $("#submitBotQuestion").onClick(function(e) {
+    $("#submitBotQuestion").click(function(e) {
         console.log('foo');
     });
 });
