@@ -43,9 +43,9 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                if (data[0]["Answer"] == null)
+                if (data == null)
                 {
-                    botinput = "Sorry. I can't help you with that";
+                    botinput = "Sorry. I can't help you with that right now!";
                 }
                 else
                 {
