@@ -27,7 +27,7 @@
         if (chatBotForm == "block") {
             chatBotForm = "none";
         } else if (chatBotForm == "none") {
-            chatBotForm == "block"
+            chatBotForm = "block"
         }
     }
 </script>
