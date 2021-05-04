@@ -10,14 +10,14 @@ $(document).ready(function() {
         let userDiv = document.createElement("div");
         userDiv.id = "userChat";
         var input = $("#chatBotInput").val();
-        userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
+        userDiv.innerHTML = `<span id="user-response">You: ${input}</span>`;
 
 
         ///Creates Bot to be submitted
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
         var input = $("#chatBotInput").val();
-        botDiv.innerHTML = `You: <span id="bot-response">${input}</span>`;
+        botDiv.innerHTML = `<span id="bot-response">HelpBot: ${input}</span>`;
         if (input != ""){
             mainDiv.appendChild(userDiv);
             mainDiv.appendChild(botDiv);
