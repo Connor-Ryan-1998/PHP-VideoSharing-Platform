@@ -3,6 +3,9 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    //Make global for async call
+    var botinput;
+
     $("#submitBotQuestion").click(function(e) {
         const mainDiv = document.getElementById("chatBotChat");
 
@@ -16,7 +19,8 @@ $(document).ready(function() {
         ///Creates Bot to be submitted
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
-        var botinput = botResponse(userinput);
+        //Fires async
+        botResponse(userinput);
         console.log(botinput);
         botDiv.innerHTML = `<span id="bot-response">HelpBot: ${botinput}</span>`;
 
@@ -40,8 +44,7 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                console.log(String(data[0]["filename"]));
-                return String(data[0]["filename"]);              
+                botinput = data[0]["filename"];              
             },
             async: false   
         });
