@@ -15,7 +15,7 @@
         <div class="form-group">
             <button type="submit" id="loginBtn" class="btn btn-primary btn-block" disabled="disabled">Log in</button>
         </div>
-        <?php echo "<a href='$login_url'><img class='fb' src=" . base_url() . "images/fb.png" . "></a>"; ?>
+        <!-- <?php echo "<a href='$login_url'><img class='fb' src=" . base_url() . "images/fb.png" . "></a>"; ?> -->
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox" name="remember"> Remember me</label>
             <a href="<?php echo base_url(); ?>forgotPassword" class="float-right">Forgot Password?</a>
