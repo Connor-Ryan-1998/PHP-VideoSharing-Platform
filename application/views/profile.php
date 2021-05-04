@@ -55,9 +55,31 @@
             <div class="col-sm">
                 <h2 class="text-center">Additional Data</h2>
                 <a href="<?php echo base_url(); ?>managementDashboard" class="btn btn-dark btn-info" role="button">Management Dashboard</a>
+                <button class="open-button" onclick="openForm()">Chat</button>
+                <!-- Chat bot to assist user -->
+                <div class="chat-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Chat</h1>
+
+                        <label for="msg"><b>Message</b></label>
+                        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                        <button type="submit" class="btn">Send</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<h3></h3>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
 <div class="main"> </div>
