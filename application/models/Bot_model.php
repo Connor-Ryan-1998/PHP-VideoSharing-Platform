@@ -3,7 +3,7 @@
 class Bot_model extends CI_Model
 {
 
-    function fetch_botResponse($input)
+    function fetch_botResponse()
     {
         $this->db->select('username');
         $this->db->from('users');
