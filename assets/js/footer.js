@@ -44,7 +44,7 @@ $(document).ready(function() {
             dataType: "JSON",
             success: function(data) {
                 console.log(data);
-                botinput = data[0]["Answer"];              
+                // botinput = data[0]["Answer"];              
             }
         });
     }
