@@ -17,7 +17,7 @@ $(document).ready(function() {
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
         var input = $("#chatBotInput").val();
-        userDiv.innerHTML = `You: <span id="bot-response">${input}</span>`;
+        botDiv.innerHTML = `You: <span id="bot-response">${input}</span>`;
         if (input != ""){
             mainDiv.appendChild(userDiv);
         }
