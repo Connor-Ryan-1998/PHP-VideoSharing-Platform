@@ -1,7 +1,7 @@
 </body>
 <!-- Chat bot to assist user -->
 <div class="chat-popup float-right" id="chatBotForm" style="display: none;">
-    <form action="/action_page.php" class="form-container">
+    <form class="form-container">
         <h1>ChatBot</h1>
 
         <label for="msg"><b>Message</b></label>
