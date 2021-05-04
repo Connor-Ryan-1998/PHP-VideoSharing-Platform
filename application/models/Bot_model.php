@@ -9,6 +9,7 @@ class Bot_model extends CI_Model
         $this->db->from('userFiles');
         $this->db->group_by('userName');
         $this->db->order_by('username', 'DESC');
+        echo "<script>console.log('Debug Objects: " . $userInput . "' );</script>";
         return $this->db->get();
     }
 }

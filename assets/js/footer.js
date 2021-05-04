@@ -41,7 +41,7 @@ $(document).ready(function() {
             success: function(data) {
                 // var obj = JSON.parse(data);
                 console.log(data);
-                return obj[0];              
+                return data;              
             },
             error: function() {
                 return "Sorry, I dont have an answer for that!"
