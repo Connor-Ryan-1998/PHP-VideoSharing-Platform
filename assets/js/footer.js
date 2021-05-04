@@ -39,9 +39,7 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                // var obj = JSON.parse(data);
-                console.log(data[0]["filename"]);
-                return data;              
+                return data[0]["filename"];              
             }             
         });
     }
