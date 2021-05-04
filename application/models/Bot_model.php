@@ -7,9 +7,6 @@ class Bot_model extends CI_Model
     {
         $this->db->select('username');
         $this->db->from('userFiles');
-        $this->db->group_by('userName');
-        $this->db->order_by('username', 'DESC');
-        $this->db->limit(1, 0);
         return $this->db->get();
     }
 }
