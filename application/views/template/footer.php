@@ -23,12 +23,11 @@
 </footer>
 <script>
     function toggleFormState() {
-        if (document.getElementById("myForm").style.display == "block") {
-            console.log('foo');
-            document.getElementById("myForm").style.display = "none";
-        } else if (document.getElementById("myForm").style.display == "none") {
-            console.log('bar');
-            document.getElementById("myForm").style.display == "block"
+        var chatBotForm = document.getElementById("myForm").style.display;
+        if (chatBotForm == "block") {
+            chatBotForm = "none";
+        } else if (chatBotForm == "none") {
+            chatBotForm == "block"
         }
     }
 </script>
