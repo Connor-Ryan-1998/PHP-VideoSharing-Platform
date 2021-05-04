@@ -25,7 +25,11 @@ footer {
   right: 28px;
   width: 280px;
 }
-
+.chatBotForm {
+  height: 300px; 
+  overflow-y:auto;
+  border: 3px solid black;
+}
 /* Chatbot form */
 .form-popup {
   display: none;

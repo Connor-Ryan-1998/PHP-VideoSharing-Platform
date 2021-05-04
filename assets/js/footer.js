@@ -9,7 +9,9 @@ $(document).ready(function() {
         userDiv.id = "userChat";
         var input = $("#chatBotInput").val();
         userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
-        mainDiv.appendChild(userDiv);
+        if (input != ""){
+            mainDiv.appendChild(userDiv);
+        }
 
         ///Clear Value on input
         $("#chatBotInput").val("");
