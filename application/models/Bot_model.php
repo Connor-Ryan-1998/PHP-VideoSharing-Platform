@@ -5,10 +5,7 @@ class Bot_model extends CI_Model
 
     function fetch_botResponse($userInput)
     {
-        $this->db->select('username');
-        $this->db->from('userFiles');
-        $this->db->group_by('userName');
-        $this->db->order_by('username', 'DESC');
+        $this->db->query('select * from users');
         return $this->db->get();
     }
 }

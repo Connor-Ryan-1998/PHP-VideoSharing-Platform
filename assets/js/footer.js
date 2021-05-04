@@ -39,13 +39,10 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                // var obj = JSON.parse(data);
-                console.log(data);
+                var obj = JSON.parse(data);
+                console.log(obj);
                 return data;              
-            },
-            error: function() {
-                return "Sorry, I dont have an answer for that!"
-            }              
+            }             
         });
     }
 });
