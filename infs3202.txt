@@ -21,9 +21,9 @@ Total = 20%
 Milestone 3
 1. Drag and drop files 2%
 2. Management Dashboard 4%
-3. TODO: ChatBot 4 %
+3. ChatBot 4 %
 4. Reccomendation Algorithm 4%
-5. TODO: Oauth 3%
+5. Item Searching 3%
 6. Forgot PW 3%
 
 Total 20%
