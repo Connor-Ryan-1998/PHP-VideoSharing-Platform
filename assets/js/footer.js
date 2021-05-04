@@ -20,6 +20,7 @@ $(document).ready(function() {
         botDiv.innerHTML = `You: <span id="bot-response">${input}</span>`;
         if (input != ""){
             mainDiv.appendChild(userDiv);
+            mainDiv.appendChild(botDiv);
         }
 
         ///Clear Value on input
