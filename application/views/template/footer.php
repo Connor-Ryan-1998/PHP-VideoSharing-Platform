@@ -3,8 +3,8 @@
 <div class="chat-popup float-right" id="chatBotForm" style="display: none;">
     <form class="form-container" id="chatBotForm">
         <h1>ChatBot</h1>
-        <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
         <div id="chatBotChat"></div>
+        <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
         <button class="SubmitQuestion" id="submitBotQuestion">Submit</button>
     </form>
 </div>

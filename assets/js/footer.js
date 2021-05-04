@@ -4,6 +4,14 @@ $(document).ready(function() {
     });
 
     $("#submitBotQuestion").click(function(e) {
-        console.log('foo');
+        const mainDiv = document.getElementById("chatBotChat");
+        let userDiv = document.createElement("div");
+        userDiv.id = "userChat";
+        var input = $("#chatBotInput").val();
+        userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
+        mainDiv.appendChild(userDiv);
+
+        ///Clear Value on input
+        $("#chatBotInput").val("");
     });
 });
