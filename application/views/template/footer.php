@@ -5,7 +5,7 @@
         <h1>ChatBot</h1>
         <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
         <div id="chatBotChat"></div>
-        <button class="SubmitQuestion" onclick="submitQuestion()">Submit</button>
+        <button class="SubmitQuestion" id="submitBotQuestion">Submit</button>
     </form>
 </div>
 <footer>
