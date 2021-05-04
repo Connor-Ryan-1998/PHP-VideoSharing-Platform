@@ -42,7 +42,6 @@ $(document).ready(function() {
                         $('#videoComments').html(data);
                     } else {
                         var obj = JSON.parse(data);
-                        console.log(obj);
                         if (obj.length > 0) {
                             var items = [];                           
                             $.each(obj, function(i, val) {

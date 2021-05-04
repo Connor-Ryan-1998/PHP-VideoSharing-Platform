@@ -51,4 +51,11 @@ class ajax extends CI_Controller
         $data = $this->file_model->fetchReccomendedForUser();
         echo json_encode($data);
     }
+
+    public function botResponse()
+    {
+        $this->load->model('bot_model');
+        $data = $this->bot_model->fetch_botResponse();
+        echo json_encode($data);
+    }
 }

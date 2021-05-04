@@ -16,8 +16,10 @@ $(document).ready(function() {
         ///Creates Bot to be submitted
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
-        var input = $("#chatBotInput").val();
+        var input = botResponse();
         botDiv.innerHTML = `<span id="bot-response">HelpBot: ${input}</span>`;
+
+        ///Adds to chat
         if (input != ""){
             mainDiv.appendChild(userDiv);
             mainDiv.appendChild(botDiv);
@@ -26,4 +28,20 @@ $(document).ready(function() {
         ///Clear Value on input
         $("#chatBotInput").val("");
     });
+
+    //Bot Response
+    function botResponse() {
+        $.ajax({
+            url: baseURL + "ajax/botResponse",
+            method: "GET",
+            success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj);
+                return obj[0];              
+            },
+            error: function() {
+                return "Sorry, I dont have an answer for that!"
+            }              
+        });
+    }
 });
