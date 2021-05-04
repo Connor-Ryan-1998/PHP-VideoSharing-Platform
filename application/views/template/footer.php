@@ -23,10 +23,9 @@
 </footer>
 <script>
     function toggleFormState() {
-        console.log(document.getElementById("myForm").style.display);
         if (document.getElementById("myForm").style.display == "block") {
             document.getElementById("myForm").style.display = "none";
-        } else {
+        } else if (document.getElementById("myForm").style.display == "none") {
             document.getElementById("myForm").style.display == "block"
         }
     }
