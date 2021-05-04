@@ -25,12 +25,20 @@ footer {
   right: 28px;
   width: 280px;
 }
+
+#user-response{
+  color: blue;
+}
+
+#bot-response{
+  color: green;
+}
 #chatBotChat {
   height: 300px; 
   overflow-y:auto;
   border: 3px solid black;
 }
-/* Chatbot form */
+/* Chatbot form
 .form-popup {
   display: none;
   position: fixed;
@@ -38,30 +46,13 @@ footer {
   right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
-}
+} */
 
 /* Add styles to the form container */
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
 }
 
 /* Set a style for the submit/login button */
