@@ -44,9 +44,8 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                botinput = data[0]["filename"];              
-            },
-            async: false   
+                botinput = data[0]["Answer"];              
+            }
         });
     }
 });
