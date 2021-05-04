@@ -21,7 +21,6 @@ $(document).ready(function() {
         botDiv.id = "botChat";
         //Fires async
         botResponse(userinput);
-        console.log(botinput);
         botDiv.innerHTML = `<span id="bot-response">HelpBot: ${botinput}</span>`;
 
         ///Adds to chat
@@ -44,6 +43,7 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
+                console.log(data);
                 botinput = data[0]["Answer"];              
             }
         });
