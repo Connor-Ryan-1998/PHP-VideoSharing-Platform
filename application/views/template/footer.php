@@ -2,7 +2,7 @@
 <script src="<?php echo base_url(); ?>assets/js/footer.js"></script>
 <!-- Chat bot to assist user -->
 <div class="chat-popup float-right" id="chatBotForm" style="display: none;">
-    <form class="form-container">
+    <form class="form-container" id="chatBotForm">
         <h1>ChatBot</h1>
         <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
         <div id="chatBotChat"></div>
@@ -28,6 +28,9 @@
             chatBotForm.style.display = "block"
         }
     }
+    $("#chatBotForm").submit(function(e) {
+        e.preventDefault();
+    });
 
     function submitQuestion() {
         console.log('foo');
