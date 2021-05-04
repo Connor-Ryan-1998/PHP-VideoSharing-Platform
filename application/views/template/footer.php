@@ -24,8 +24,10 @@
 <script>
     function toggleFormState() {
         if (document.getElementById("myForm").style.display == "block") {
+            console.log('foo');
             document.getElementById("myForm").style.display = "none";
         } else if (document.getElementById("myForm").style.display == "none") {
+            console.log('bar');
             document.getElementById("myForm").style.display == "block"
         }
     }
