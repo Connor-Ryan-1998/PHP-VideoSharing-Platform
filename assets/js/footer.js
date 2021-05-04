@@ -9,18 +9,18 @@ $(document).ready(function() {
         //Creates your Question to be submitted
         let userDiv = document.createElement("div");
         userDiv.id = "userChat";
-        var input = $("#chatBotInput").val();
-        userDiv.innerHTML = `<span id="user-response">You: ${input}</span>`;
+        var userinput = $("#chatBotInput").val();
+        userDiv.innerHTML = `<span id="user-response">You: ${userinput}</span>`;
 
 
         ///Creates Bot to be submitted
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
-        var input = botResponse();
-        botDiv.innerHTML = `<span id="bot-response">HelpBot: ${input}</span>`;
+        var botinput = botResponse(userinput);
+        botDiv.innerHTML = `<span id="bot-response">HelpBot: ${botinput}</span>`;
 
         ///Adds to chat
-        if (input != ""){
+        if (userinput != ""){
             mainDiv.appendChild(userDiv);
             mainDiv.appendChild(botDiv);
         }
@@ -30,10 +30,14 @@ $(document).ready(function() {
     });
 
     //Bot Response
-    function botResponse() {
+    function botResponse(input) {
         $.ajax({
             url: baseURL + "ajax/botResponse",
-            method: "GET",
+            method: "POST",
+            data: {
+                'input': input
+            },
+            dataType: "JSON",
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(data);
