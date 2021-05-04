@@ -28,7 +28,7 @@
             console.log('foo');
             chatBotForm = "none";
         } else if (chatBotForm == "none") {
-            console.log('foo');
+            console.log('bar');
             chatBotForm = "block"
         }
     }
