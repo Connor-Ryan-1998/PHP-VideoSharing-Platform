@@ -28,6 +28,10 @@
             chatBotForm.style.display = "block"
         }
     }
+
+    function submitQuestion() {
+        console.log('foo');
+    };
 </script>
 
 </html>
