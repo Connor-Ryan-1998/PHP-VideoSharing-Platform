@@ -51,7 +51,7 @@ $(document).ready(function() {
                 {
                     botinput = data[0]["Answer"];     
                 }         
-            }
+            }, async: false
         });
     }
 });
