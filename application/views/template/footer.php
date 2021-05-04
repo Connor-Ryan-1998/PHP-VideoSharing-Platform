@@ -1,6 +1,6 @@
 </body>
 <!-- Chat bot to assist user -->
-<div class="chat-popup" id="myForm" style="display: none;">
+<div class="chat-popup float-right" id="chatBotForm" style="display: none;">
     <form action="/action_page.php" class="form-container">
         <h1>Chat</h1>
 
@@ -16,10 +16,20 @@
         <div class="row vcenter">
             <div class="col-xs-6">
                 <p> Connor Ryan S4434200 &copy; : 2021-<?php echo date("Y"); ?></p>
-                <button class="open-button" onclick="toggleFormState()">Get Chatbot Help</button>
+                <button class="btn btn-info btn-circle btn-xl" onclick="toggleFormState()">Chatbot</button>
             </div>
         </div>
     </div>
 </footer>
+<script>
+    function toggleFormState() {
+        var chatBotForm = document.getElementById("chatBotForm");
+        if (chatBotForm.style.display === "block") {
+            chatBotForm.style.display = "none";
+        } else {
+            chatBotForm.style.display = "block"
+        }
+    }
+</script>
 
 </html>
