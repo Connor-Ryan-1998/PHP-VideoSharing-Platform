@@ -1,5 +1,4 @@
 </body>
-<script src="<?php echo base_url(); ?>assets/js/footer.js"></script>
 <!-- Chat bot to assist user -->
 <div class="chat-popup float-right" id="chatBotForm" style="display: none;">
     <form class="form-container" id="chatBotForm">
@@ -19,6 +18,7 @@
         </div>
     </div>
 </footer>
+<script src="<?php echo base_url(); ?>assets/js/footer.js"></script>
 <script>
     function toggleFormState() {
         var chatBotForm = document.getElementById("chatBotForm");
