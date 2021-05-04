@@ -25,8 +25,10 @@
     function toggleFormState() {
         var chatBotForm = document.getElementById("myForm").style.display;
         if (chatBotForm == "block") {
+            console.log('foo');
             chatBotForm = "none";
         } else if (chatBotForm == "none") {
+            console.log('foo');
             chatBotForm = "block"
         }
     }
