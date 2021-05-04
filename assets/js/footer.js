@@ -16,7 +16,6 @@ $(document).ready(function() {
         ///Creates Bot to be submitted
         let botDiv = document.createElement("div");
         botDiv.id = "botChat";
-        console.log(botResponse(userinput).ajaxStop());
         var botinput = botResponse(userinput);
         console.log(botinput);
         botDiv.innerHTML = `<span id="bot-response">HelpBot: ${botinput}</span>`;
