@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/header.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/footer.js"></script>
 
     <link rel="icon" href="<?= base_url() ?>assets/favicon.ico">
     <!-- Icon Referencine on this line <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
