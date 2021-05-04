@@ -28,13 +28,6 @@
             chatBotForm.style.display = "block"
         }
     }
-    $("#chatBotForm").submit(function(e) {
-        e.preventDefault();
-    });
-
-    function submitQuestion() {
-        console.log('foo');
-    };
 </script>
 
 </html>
