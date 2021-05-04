@@ -43,8 +43,14 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                console.log(data[0]["Answer"]);
-                // botinput = data[0]["Answer"];              
+                if (data[0]["Answer"] == null)
+                {
+                    botinput = "Sorry. I can't help you with that";
+                }
+                else
+                {
+                    botinput = data[0]["Answer"];     
+                }         
             }
         });
     }
