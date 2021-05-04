@@ -54,7 +54,9 @@ class ajax extends CI_Controller
 
     public function botResponse()
     {
+
         $userInput = $this->input->post('input');
+        echo "<script>console.log('Debug Objects: " . $userInput . "' );</script>";
         $this->load->model('bot_model');
         $data = $this->bot_model->fetch_botResponse($userInput);
         echo json_encode($data);
