@@ -8,10 +8,10 @@ footer {
   /* Set the fixed height of the footer here */
   background-color: #343a40;
 }
-/* 
-{box-sizing: border-box;} */
 
-/* Button used to open the chat form - fixed at the bottom of the page */
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bot tom of the page */
 .open-button {
   background-color: #555;
   color: white;
