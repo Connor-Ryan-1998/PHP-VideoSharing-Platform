@@ -3,14 +3,9 @@
 <div class="chat-popup float-right" id="chatBotForm" style="display: none;">
     <form class="form-container">
         <h1>ChatBot</h1>
-
-        <label for="msg"><b>Message</b></label>
-        <textarea></textarea>
         <div><input id="input" type="text" placeholder="Say something..." autocomplete="off" /></div>
         <div id="chatBotChat"></div>
-
-
-        <button type="submit" class="btn">Send</button>
+        <!-- <button type="submit" class="btn">Send</button> -->
     </form>
 </div>
 <footer>
