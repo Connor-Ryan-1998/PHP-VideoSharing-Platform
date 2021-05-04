@@ -16,20 +16,10 @@
         <div class="row vcenter">
             <div class="col-xs-6">
                 <p> Connor Ryan S4434200 &copy; : 2021-<?php echo date("Y"); ?></p>
+                <button class="open-button" onclick="toggleFormState()">Get Chatbot Help</button>
             </div>
-            <button class="open-button" onclick="toggleFormState()">Chat</button>
         </div>
     </div>
 </footer>
-<script>
-    function toggleFormState() {
-        var chatBotForm = document.getElementById("myForm");
-        if (chatBotForm.style.display === "block") {
-            chatBotForm.style.display = "none";
-        } else {
-            chatBotForm.style.display = "block"
-        }
-    }
-</script>
 
 </html>
