@@ -39,7 +39,7 @@ $(document).ready(function() {
             },
             dataType: "JSON",
             success: function(data) {
-                return data[0]["filename"];              
+                return String(data[0]["filename"]);              
             }             
         });
     }
