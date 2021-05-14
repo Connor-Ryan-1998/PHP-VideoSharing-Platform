@@ -9,6 +9,7 @@ $(document).ready(function() {
                     search: request.term
                 },
                 success: function(data) {
+                    $('#search_text').css({"background-color":"blue"});
                     response(data);
                 }
             });
