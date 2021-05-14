@@ -106,6 +106,9 @@ html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% i
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active {
     font-weight: normal;
-    opacity: 0.5;
     margin: -1px;
+}
+
+.ui-menu-item.ui-state-focus {
+  background: #faa;
 }
