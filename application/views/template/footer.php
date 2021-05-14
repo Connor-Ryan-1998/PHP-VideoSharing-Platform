@@ -1,22 +1,14 @@
 </body>
 <!-- Chat bot to assist user -->
-<!-- <div class="chat-popup float-right" id="chatBotForm">
+<div class="chat-popup float-right" id="chatBotForm">
     <form class="form-container" id="chatBotForm">
         <h1>ChatBot</h1>
         <div id="chatBotChat"></div>
         <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
         <button class="SubmitQuestion" id="submitBotQuestion">Submit</button>
     </form>
-</div> -->
+</div>
 <footer>
-    <div class="chat-popup float-right" id="chatBotForm">
-        <form class="form-container" id="chatBotForm">
-            <h1>ChatBot</h1>
-            <div id="chatBotChat"></div>
-            <div><input id="chatBotInput" type="text" placeholder="Ask me anything!" autocomplete="off" /></div>
-            <button class="SubmitQuestion" id="submitBotQuestion">Submit</button>
-        </form>
-    </div>
     <div class="container bg-dark text-white w-100">
         <div class="row vcenter">
             <div class="col-xs-6">

@@ -34,6 +34,8 @@ footer {
   color: green;
 }
 #chatBotChat {
+  position: fixed;
+  bottom: 0;
   display: none;
   height: 300px; 
   overflow-y:auto;
