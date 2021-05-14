@@ -83,9 +83,9 @@ footer {
 .ui-autocomplete { position: absolute; background:#CCC }   
 
 
-/* html .ui-autocomplete { 
+html .ui-autocomplete { 
   width:1px; 
-} */
+}
 .ui-menu {
     list-style:none;
     padding: 2px;
