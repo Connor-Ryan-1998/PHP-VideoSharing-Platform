@@ -40,7 +40,7 @@ footer {
 }
 #chatBotFormDiv {
   position: fixed;
-  bottom: 0;
+  bottom: 15px;
 }
 /* Chatbot form
 .form-popup {
