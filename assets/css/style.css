@@ -36,6 +36,10 @@ footer {
 #chatBotChat {
   height: 300px; 
   overflow-y:auto;
+  bottom: 0;
+  right: 15px;
+  position: fixed;
+  z-index: 9;
   border: 3px solid black;
 }
 /* Chatbot form
@@ -43,10 +47,6 @@ footer {
 .form-container {
   max-width: 300px;
   padding: 10px;
-  bottom: 0;
-  right: 15px;
-  position: fixed;
-  z-index: 9;
   background-color: white;
 }
 
