@@ -39,7 +39,7 @@ footer {
   border: 3px solid black;
 }
 #chatBotFormDiv {
-  margin: 1px;
+  border-style: solid;
   display: none;
   position: fixed;
   right: 30px;
