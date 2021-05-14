@@ -32,7 +32,7 @@ class login extends CI_Controller
 	public function check_login()
 	{
 		$this->load->model('user_model');
-		$data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or passwrod!! </div> ";
+		$data['error'] = "<div class=\"alert alert-danger\" role=\"alert\"> Incorrect username or password!! </div> ";
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->view('template/header');

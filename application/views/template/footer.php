@@ -1,6 +1,6 @@
 </body>
 <!-- Chat bot to assist user -->
-<div class="chat-popup float-right" id="chatBotForm">
+<div class="chat-popup float-right" id="chatBotFormDiv">
     <form class="form-container" id="chatBotForm">
         <h1>ChatBot</h1>
         <div id="chatBotChat"></div>

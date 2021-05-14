@@ -34,12 +34,13 @@ footer {
   color: green;
 }
 #chatBotChat {
-  /* position: fixed;
-  bottom: 0; */
-  display: none;
   height: 300px; 
   overflow-y:auto;
   border: 3px solid black;
+}
+#chatBotFormDiv {
+  position: fixed;
+  bottom: 0;
 }
 /* Chatbot form
 .form-popup {
