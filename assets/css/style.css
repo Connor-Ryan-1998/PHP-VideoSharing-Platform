@@ -41,6 +41,7 @@ footer {
 #chatBotFormDiv {
   border-radius: 25px;
   border-style: solid;
+  padding: 10px;
   display: none;
   position: fixed;
   right: 45px;
