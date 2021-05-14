@@ -17,7 +17,7 @@ $(document).ready(function() {
             // Set selection
             $('#search_text').val(ui.item.label); // display the selected text
             window.location.replace(baseURL+"video/SearchVideo/" + ui.item.value);
-            return false;
+            // return false;
         }
     });
 });
