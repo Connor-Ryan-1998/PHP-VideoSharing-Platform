@@ -1,6 +1,6 @@
 </body>
 <!-- Chat bot to assist user -->
-<div class="chat-popup float-right" id="chatBotFormDiv" style="display: none;">
+<div class="chat-popup float-right" id="chatBotFormDiv">
     <form class="form-container" id="chatBotForm">
         <h1>ChatBot</h1>
         <div id="chatBotChat"></div>
@@ -21,7 +21,7 @@
 <script src="<?php echo base_url(); ?>assets/js/footer.js"></script>
 <script>
     function toggleFormState() {
-        var chatBotForm = document.getElementById("chatBotForm");
+        var chatBotForm = document.getElementById("chatBotFormDiv");
         if (chatBotForm.style.display === "block") {
             chatBotForm.style.display = "none";
         } else {
