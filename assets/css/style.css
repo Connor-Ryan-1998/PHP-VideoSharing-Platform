@@ -39,8 +39,10 @@ footer {
   border: 3px solid black;
 }
 #chatBotFormDiv {
+  border-radius: 35px;
   position: fixed;
-  bottom: 15px;
+  right: 300px;
+  bottom: 30px;
 }
 /* Chatbot form
 .form-popup {
