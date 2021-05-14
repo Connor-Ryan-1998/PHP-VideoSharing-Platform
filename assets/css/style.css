@@ -81,8 +81,10 @@ footer {
 }
 
 /* workarounds */
-/* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
-.ui-menu {
+/* html .ui-autocomplete { 
+  width:1px; 
+} /* without this, the menu expands to 100% in IE6 */
+/* .ui-menu {
     list-style:none;
     padding: 2px;
     margin: 0;
@@ -111,4 +113,4 @@ footer {
 .ui-menu .ui-menu-item a.ui-state-active {
     font-weight: normal;
     margin: -1px;
-} */
+} */ 
