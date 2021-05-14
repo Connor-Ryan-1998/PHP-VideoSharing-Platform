@@ -76,8 +76,9 @@ footer {
 /* Dropdown Styling */
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover 
 {
-  border: 1px solid #000;
-  background: #000;
+  font-weight: normal;
+  background: #faa;
+  margin: -1px;
 }
 .ui-autocomplete { position: absolute; background:#CCC }   
 
@@ -85,7 +86,7 @@ footer {
 /* html .ui-autocomplete { 
   width:1px; 
 } */
-/* .ui-menu {
+.ui-menu {
     list-style:none;
     padding: 2px;
     margin: 0;
@@ -115,4 +116,4 @@ footer {
     font-weight: normal;
     background: #faa;
     margin: -1px;
-}  */
+} 
